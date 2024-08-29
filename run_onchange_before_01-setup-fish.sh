@@ -12,3 +12,7 @@ tide configure --auto --style=Lean --prompt_colors='True color' \
   --prompt_spacing=Sparse --icons='Few icons' --transient=No
 
 set -U zoxide_cmd cd
+
+set NODE_VERSION v20.17.0
+nvm install $NODE_VERSION
+set -U nvm_default_version $NODE_VERSION
