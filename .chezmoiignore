@@ -1,1 +1,14 @@
 Dockerfile
+.config/fish/fish_variables
+.config/fish/*fishd.tmp*
+*bak
+.config/.fish/completions/bun.fish
+.config/.fish/conf.d/rustup.fish
+
+.config/.fish/functions/flags.fish
+.config/.fish/functions/gfum.fish
+.config/.fish/functions/grumi.fish
+.config/.fish/functions/kvim.fish
+.config/.fish/functions/lvim.fish
+.config/fish/functions/dev_token.fish
+.config/fish/functions/epxy.fish
