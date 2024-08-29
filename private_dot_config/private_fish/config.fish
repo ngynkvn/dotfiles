@@ -11,4 +11,7 @@ end
 
 # replaced by `fisher install kidonng/zoxide.fish`
 # zoxide init --cmd cd fish | source
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+if type -q /home/linuxbrew/.linuxbrew/bin/brew
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+end
