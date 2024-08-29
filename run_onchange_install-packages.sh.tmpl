@@ -1,6 +1,7 @@
 #!/bin/sh
+pkgs="ripgrep curl fish neovim"
 {{ if eq .chezmoi.os "linux" -}}
-sudo apt install ripgrep
+sudo apt install $pkgs
 {{ else if eq .chezmoi.os "darwin" -}}
-brew install ripgrep
+brew install $pkgs
 {{ end -}}
