@@ -3,8 +3,12 @@ if status is-interactive
 end
 
 # pnpm
-set -gx PNPM_HOME "/home/ngynkvn/.local/share/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
+if type -q pnpm
+    set -gx PNPM_HOME "/home/ngynkvn/.local/share/pnpm"
+    set -gx PATH "$PNPM_HOME" $PATH
+end
 # pnpm end
-zoxide init --cmd cd fish | source
+
+# replaced by `fisher install kidonng/zoxide.fish`
+# zoxide init --cmd cd fish | source
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
