@@ -13,6 +13,6 @@ tide configure --auto --style=Lean --prompt_colors='True color' \
 
 set -U zoxide_cmd cd
 
-NODE_VERSION=v20.16.0
+set NODE_VERSION v20.16.0
 nvm install $NODE_VERSION
 set -U nvm_default_version $NODE_VERSION
