@@ -1,12 +1,27 @@
 #!/bin/sh
-pkgs="ripgrep curl fish"
+
+# Homebrew Install
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+PKGS="ripgrep curl fish"
+
 {{ if eq .chezmoi.os "linux" -}}
-sudo apt-get install -y $pkgs
+
+sudo apt-get install -y $PKGS
+
+# Neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
+
+# Zoxide
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+
 rm nvim-linux64.tar.gz
+
 {{ else if eq .chezmoi.os "darwin" -}}
-brew install $pkgs
-brew install neovim
+
+brew install $PKGS
+brew install neovim zoxide
+
 {{ end -}}
