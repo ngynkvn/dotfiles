@@ -7,6 +7,12 @@ then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# Zoxide
+if ! command -v zoxide; 
+then
+  curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+fi
+
 PKGS="ripgrep curl fish lsd fzf bat"
 
 ## LINUX ##
@@ -32,16 +38,11 @@ then
 fi
 
 
-# Zoxide
-if ! command -v zoxide; 
-then
-  curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-fi
 
 ## OSX ##
 {{ else if eq .chezmoi.os "darwin" -}}
 
 brew install $PKGS
-brew install neovim zoxide fd
+brew install neovim fd
 
 {{ end -}}
