@@ -1,7 +1,11 @@
 #!/bin/sh
-pkgs="ripgrep curl fish neovim"
+pkgs="ripgrep curl fish"
 {{ if eq .chezmoi.os "linux" -}}
 sudo apt install $pkgs
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
 {{ else if eq .chezmoi.os "darwin" -}}
 brew install $pkgs
+brew install neovim
 {{ end -}}
