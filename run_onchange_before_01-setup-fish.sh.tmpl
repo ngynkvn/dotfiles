@@ -16,3 +16,9 @@ set -U zoxide_cmd cd
 set NODE_VERSION v20.17.0
 nvm install $NODE_VERSION
 set -U nvm_default_version $NODE_VERSION
+
+fish_add_path ~/.local/bin/
+
+{{ if eq .chezmoi.os "linux" -}}
+fish_add_path /opt/nvim-linux64/bin
+{{ end -}}

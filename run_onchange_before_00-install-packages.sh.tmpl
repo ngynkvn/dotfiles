@@ -1,19 +1,17 @@
 #!/bin/sh
 
 # Homebrew Install
-if ! command -v brew;
-then
+if ! command -v brew; then
   echo "Installing homebrew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Zoxide
-if ! command -v zoxide; 
-then
+if ! command -v zoxide; then
   curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 fi
 
-PKGS="ripgrep curl fish lsd fzf bat"
+PKGS="ripgrep curl fish lsd fzf bat git"
 
 ## LINUX ##
 {{ if eq .chezmoi.os "linux" -}}
@@ -21,23 +19,18 @@ PKGS="ripgrep curl fish lsd fzf bat"
 sudo apt-get install -y $PKGS
 sudo apt-get install -y fd-find
 
-if command -v fdfind;
-then
+if command -v fdfind; then
   ln -s $(which fdfind) ~/.local/bin/fd
 fi
 
-
 # Neovim
-if ! command -v nvim;
-then
+if ! command -v nvim; then
   echo "Installing neovim"
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
   sudo rm -rf /opt/nvim
   sudo tar -C /opt -xzf nvim-linux64.tar.gz
   rm nvim-linux64.tar.gz
 fi
-
-
 
 ## OSX ##
 {{ else if eq .chezmoi.os "darwin" -}}
