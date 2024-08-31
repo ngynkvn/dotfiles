@@ -17,11 +17,7 @@ PKGS="ripgrep curl fish lsd fzf bat git"
 {{ if eq .chezmoi.os "linux" -}}
 
 sudo apt-get install -y $PKGS
-sudo apt-get install -y fd-find
-
-if command -v fdfind; then
-  ln -s $(which fdfind) ~/.local/bin/fd
-fi
+sudo apt-get install -y fd-find build-essential
 
 # Neovim
 if ! command -v nvim; then
@@ -36,6 +32,6 @@ fi
 {{ else if eq .chezmoi.os "darwin" -}}
 
 brew install $PKGS
-brew install neovim fd
+brew install neovim fd gcc
 
 {{ end -}}
