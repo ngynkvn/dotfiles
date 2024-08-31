@@ -12,6 +12,3 @@ Dockerfile
 .config/.fish/functions/lvim.fish
 .config/fish/functions/dev_token.fish
 .config/fish/functions/epxy.fish
-
-# Templated
-.config/fish/config.fish
