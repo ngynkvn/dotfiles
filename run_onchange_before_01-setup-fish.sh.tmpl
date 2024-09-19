@@ -1,10 +1,13 @@
 #!{{ lookPath "fish" }}
 
-type fisher &>/dev/null || curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+# Check if fisher is installed, if not we `curl | source` it
+type fisher &>/dev/null || \
+  curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
 fisher install jorgebucaran/nvm.fish \
   IlanCosman/tide@v6 \
-  kidonng/zoxide.fish
+  kidonng/zoxide.fish \
+  PatrickF1/fzf.fish
 
 tide configure --auto --style=Lean --prompt_colors='True color' \
   --show_time='24-hour format' --lean_prompt_height='Two lines' \
