@@ -1,9 +1,8 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
-
 # pnpm
-type -q pnpm; and set -gx PNPM_HOME "/home/ngynkvn/.local/share/pnpm"; and set -gx PATH "$PNPM_HOME" $PATH
+type -q pnpm; and set -gx PNPM_HOME "$HOME/.local/share/pnpm"; and set -gx PATH "$PNPM_HOME" $PATH
 
 ## OSX ##
 type -q brew; or if test -e /opt/homebrew/bin/brew
@@ -17,3 +16,5 @@ test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell
 # Load pyenv automatically by appending
 # the following to ~/.config/fish/config.fish:
 type -q pyenv; and pyenv init - | source
+
+set fish_greeting
