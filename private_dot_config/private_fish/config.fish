@@ -7,6 +7,9 @@ end
 # pnpm
 type -q pnpm; and set -gx PNPM_HOME "$HOME/.local/share/pnpm"; and set -gx PATH "$PNPM_HOME" $PATH
 
+# replaced by `fisher install kidonng/zoxide.fish`
+# zoxide init --cmd cd fish | source
+
 ## OSX ##
 type -q brew; or if test -e /opt/homebrew/bin/brew
     eval $(/opt/homebrew/bin/brew shellenv)
@@ -15,9 +18,13 @@ type -q brew; or if test -e /opt/homebrew/bin/brew
 end
 
 test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
+source "$HOME/.cargo/env.fish" # For fish
 
 # Load pyenv automatically by appending
 # the following to ~/.config/fish/config.fish:
 type -q pyenv; and pyenv init - | source
 
 set fish_greeting
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
