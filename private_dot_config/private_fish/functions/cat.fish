@@ -1,4 +1,4 @@
-set _EXE (basename (type -p batcat || type -p bat))
-function cat --wraps=$E --description 'alias cat=$E'
-    $_EXE $argv
+function cat --wraps=bat --description 'alias cat=bat'
+    set exe (basename (type -p batcat || type -p bat))
+    $exe $argv
 end
