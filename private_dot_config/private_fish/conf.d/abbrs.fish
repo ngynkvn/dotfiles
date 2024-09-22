@@ -1,4 +1,20 @@
-# Try to pipe any known command into less, colored,
+function _git_clone_src
+    echo begin
+    echo set repo_url %
+    echo set -q repo_url[1]; or return
+    echo 'git clone "$repo_url" "~/dev/source/$(basename -s .git $repo_url)"'
+    echo end
+end
+abbr --add dls --set-cursor --function _git_clone_src
+
+# This first creates a function last_history_item which outputs the last entered command. It then
+# adds an abbreviation which replaces !! with the result of calling this function. Taken together,
+# this is similar to the !! history expansion feature of bash.
+function last_history_item
+    echo $history[1]
+end
+abbr -a !! --position anywhere --function last_history_item
+
 # with a "cless" abbr
 # E.g. `git cless<SPACE>` turns into `git --color=always | less -R --quit-if-one-screen
 # with the cursor in front of the pipe
@@ -30,8 +46,8 @@ function cless
         case git
             # it's git, we need to figure out the subcommand
             set -l optspecs version h/help C= c=+ 'e-exec-path=?' html-path man-path info-path p/paginate \
-            P/no-pager no-replace-objects bare git-dir= work-tree= namespace= super-prefix= \
-            literal-pathspecs glob-pathspecs noglob-pathspecs icase-pathspecs
+                P/no-pager no-replace-objects bare git-dir= work-tree= namespace= super-prefix= \
+                literal-pathspecs glob-pathspecs noglob-pathspecs icase-pathspecs
             if not argparse -s $optspecs -- $tok[2..] 2>/dev/null
                 set opt
                 # at least log and grep won't use options after the first nonopt
