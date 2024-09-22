@@ -1,5 +1,8 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
+# Trying to avoid having them inside nvim :|
+if status is-login
+    fish_vi_key_bindings
+else
+    fish_default_key_bindings
 end
 # pnpm
 type -q pnpm; and set -gx PNPM_HOME "$HOME/.local/share/pnpm"; and set -gx PATH "$PNPM_HOME" $PATH
