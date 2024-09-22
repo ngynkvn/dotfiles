@@ -1,12 +1,12 @@
 function llmdiffsum
+    argparse 'g/grammar=?' 'm/model_name=?' 'd/model_dir=?' -- $argv; or return
     type -q llama-cli; or begin
         echo "Missing llama-cli in path. Exiting"
         return 1
     end
-    set -q GRAMMAR; or set GRAMMAR "$HOME/.local/llama.cpp/grammars/conventional-commit.gbnf"
-    # TODO: configuration
-    set -q MODEL_NAME; or set MODEL_NAME 'meta-llama-3.1-8b-instruct.Q4_K_M.gguf'
-    set -q MODEL_DIR; or set MODEL_DIR "$HOME/.local/llama.cpp/models/"
+    set -q _flag_g; and set GRAMMAR $_flag_g; or set GRAMMAR "$HOME/.local/llama.cpp/grammars/conventional-commit.gbnf"
+    set -q _flag_m; and set MODEL_NAME $_flag_m; or set MODEL_NAME 'meta-llama-3.1-8b-instruct.Q4_K_M.gguf'
+    set -q _flag_d; and set MODEL_DIR $_flag_d; or set MODEL_DIR "$HOME/.local/llama.cpp/models/"
     set -q MODEL_PATH; or set MODEL_PATH "$MODEL_DIR$MODEL_NAME"
 
     set -l ignored
@@ -15,9 +15,7 @@ function llmdiffsum
     end
     echo "ignoring: $ignored"
 
-    set promptfile (mktemp)
-    echo >$promptfile "\
-<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+    set system_prompt "\
 You are a commit message generator. 
 Write short commit messages and include details based on the
 diff file that follows. 
@@ -28,13 +26,48 @@ Examples:
     - feat: implement JWT-based authentication system for secure user sessions
     - feat: add command line parsing and subcommands
     - fix: correct user session timeout issue by adjusting token expiration handling
-    - chore: upgrade to latest version of Node.js and update dependency lockfile <|eot_id|>\ <|start_header_id|>user<|end_header_id|>
+    - chore: upgrade to latest version of Node.js and update dependency lockfile"
+    set user_prompt "\
 <diff>
 $(git diff HEAD -- $ignored | /bin/cat)
-</diff><|eot_id|><|start_header_id|>assistant<|end_header_id|>"
-    and llama-cli -m $MODEL_PATH \
-        -f $promptfile \
-        --grammar-file $GRAMMAR
+</diff>"
+    set promptfile (mktemp)
+    _mk_prompt $MODEL_NAME $system_prompt $user_prompt >$promptfile
+    /bin/cat $promptfile
+    return
+    and begin
+        set_color 5261a9
+        llama-cli -m $MODEL_PATH \
+            -f $promptfile \
+            --log-disable \
+            --no-display-prompt \
+            --grammar-file $GRAMMAR
+        set_color normal
+    end
+end
+
+function _mk_prompt --argument-names model_name system_prompt user_prompt
+    if string match '*dolphin*' $model_name
+        echo "\
+<|im_start|>system
+$system_prompt<|im_end|>
+<|im_start|>user
+$user_prompt<|im_end|>
+<|im_start|>assistant
+"
+    else if string match '*meta-llama-3.1*' $model_name
+        echo "\
+<|begin_of_text|>\
+<|start_header_id|>system<|end_header_id|>
+$system_prompt<|eot_id|>\
+<|start_header_id|>user<|end_header_id|>
+$user_prompt<|eot_id|>\
+<|start_header_id|>assistant<|end_header_id|>
+"
+    else
+        echo "$(set_color red)ERROR: unknown model prompt format for $(set_color normal)$model_name"
+    end
+
 end
 
 
