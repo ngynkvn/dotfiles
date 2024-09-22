@@ -12,3 +12,4 @@ Dockerfile
 .config/.fish/functions/lvim.fish
 .config/fish/functions/dev_token.fish
 .config/fish/functions/epxy.fish
+.local/llama.cpp/models/*
