@@ -1,8 +1,11 @@
+
+abbr --add -- hfc 'huggingface-cli download --local-dir ~/.local/llama.cpp/models/'
+
 function _git_clone_src
     echo begin
     echo set repo_url %
     echo set -q repo_url[1]; or return
-    echo 'git clone "$repo_url" "~/dev/source/$(basename -s .git $repo_url)"'
+    echo 'git clone "$repo_url" $HOME/dev/source/$(basename -s .git $repo_url)'
     echo end
 end
 abbr --add dls --set-cursor --function _git_clone_src

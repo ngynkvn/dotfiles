@@ -11,5 +11,8 @@ function aiprompt --description 'Prompt llama.cpp'
     set -q LLAMA_ARG_N_GPU_LAYERS; or set LLAMA_ARG_N_GPU_LAYERS 8
     set -q LLAMA_ARG_FLASH_ATTN; or set LLAMA_ARG_FLASH_ATTN 1
 
-    llama-cli -co -m $MODEL_PATH --prompt $argv 2>/dev/null
+    llama-cli -co -m $MODEL_PATH --prompt "\
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+You are a developer writing clear, concise commit messages for a git repository based on diff files.<|eot_id|><|start_header_id|>user<|end_header_id|>
+$argv<|eot_id|>"
 end
