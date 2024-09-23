@@ -1,8 +1,4 @@
-# Trying to avoid having them inside nvim :|
-if status is-login
-    fish_vi_key_bindings
-else
-    fish_default_key_bindings
+if status is-interactive
 end
 
 # replaced by `fisher install kidonng/zoxide.fish`
@@ -19,6 +15,7 @@ test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell
 
 # pnpm
 type -q pnpm; and set -gx PNPM_HOME "$HOME/.local/share/pnpm"; and set -gx PATH "$PNPM_HOME" $PATH
+source "$HOME/.cargo/env.fish" # For fish
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
@@ -29,5 +26,8 @@ source "$HOME/.cargo/env.fish" # For fish
 
 # python
 type -q pyenv; and pyenv init - | source
+# Alt-e for directory search
+fzf_configure_bindings --directory=\e`
 
 set fish_greeting
+set --export FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*" --preview="_fzf_preview_file {}"'
