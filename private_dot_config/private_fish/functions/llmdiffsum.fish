@@ -5,7 +5,7 @@ function llmdiffsum
         return 1
     end
     set -q _flag_g; and set GRAMMAR $_flag_g; or set GRAMMAR "$HOME/.local/llama.cpp/grammars/conventional-commit.gbnf"
-    set -q _flag_m; and set MODEL_NAME $_flag_m; or set MODEL_NAME 'meta-llama-3.1-8b-instruct.Q4_K_M.gguf'
+    set -q _flag_m; and set MODEL_NAME $_flag_m; or set MODEL_NAME 'Qwen2.5-7B-Instruct.Q4_K_S.gguf'
     set -q _flag_d; and set MODEL_DIR $_flag_d; or set MODEL_DIR "$HOME/.local/llama.cpp/models/"
     set -q MODEL_PATH; or set MODEL_PATH "$MODEL_DIR$MODEL_NAME"
 
@@ -33,14 +33,12 @@ $(git diff HEAD -- $ignored | /bin/cat)
 </diff>"
     set promptfile (mktemp)
     _mk_prompt $MODEL_NAME $system_prompt $user_prompt >$promptfile
-    /bin/cat $promptfile
-    return
     and begin
         set_color 5261a9
         llama-cli -m $MODEL_PATH \
             -f $promptfile \
-            --log-disable \
             --no-display-prompt \
+            #--log-disable \
             --grammar-file $GRAMMAR
         set_color normal
     end
@@ -64,8 +62,17 @@ $system_prompt<|eot_id|>\
 $user_prompt<|eot_id|>\
 <|start_header_id|>assistant<|end_header_id|>
 "
+    else if string match '*Qwen2*' $model_name
+        echo "\
+<|im_start|>system
+$system_prompt<|im_end|>
+<|im_start|>user
+$user_prompt<|im_end|>
+<|im_start|>assistant
+"
     else
         echo "$(set_color red)ERROR: unknown model prompt format for $(set_color normal)$model_name"
+        exit 1
     end
 
 end
