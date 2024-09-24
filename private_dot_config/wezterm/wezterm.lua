@@ -40,6 +40,6 @@ config.default_cursor_style = "BlinkingBlock"
 config.animation_fps = 1
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
-config.cursor_blink_rate = 720
+config.cursor_blink_rate = 800
 
 return config
