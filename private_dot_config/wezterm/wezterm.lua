@@ -24,6 +24,9 @@ config.window_padding = {
 	bottom = 0,
 }
 
+-- Dim inactive pane
+config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
+
 -- Fonts
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "ExtraLight" })
 config.font_size = 14.0

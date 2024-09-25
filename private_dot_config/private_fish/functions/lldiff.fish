@@ -5,7 +5,7 @@ function lldiff
         return 1
     end
     set -q _flag_g; and set GRAMMAR $_flag_g; or set GRAMMAR "$HOME/.local/llama.cpp/grammars/conventional-commit.gbnf"
-    set -q _flag_m; and set MODEL_NAME $_flag_m; or set MODEL_NAME 'qwen2.5-7b-instruct-q5_k_m.gguf'
+    set -q _flag_m; and set MODEL_NAME $_flag_m; or set MODEL_NAME 'llama-3.2-3b-instruct-q8_0.gguf'
     set -q _flag_d; and set MODEL_DIR $_flag_d; or set MODEL_DIR "$HOME/.local/llama.cpp/models/"
     set -q _flag_l; and set NGPU_LAYERS $_flag_ng; or set NGPU_LAYERS 80
     set -q _flag_t; and set NTOKENS $_flag_nt; or set NTOKENS 512
