@@ -1,19 +1,20 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+require("lua/tab")
 config.colors = require("lua/colors")
 config.background = require("lua/background")
 
 -- Window
 config.window_frame = {
-	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Light" }),
-	font_size = 12.0,
+	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold" }),
+	font_size = 14.0,
 	active_titlebar_bg = "#111111",
 }
+
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = true
 config.tab_bar_at_bottom = true
--- TODO: https://wezfurlong.org/wezterm/config/lua/config/tab_bar_style.html
 
 -- Pixels
 config.window_padding = {
