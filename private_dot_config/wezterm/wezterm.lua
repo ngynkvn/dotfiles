@@ -8,8 +8,7 @@ config.background = require("lua/background")
 config.window_frame = {
 	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Light" }),
 	font_size = 12.0,
-	active_titlebar_bg = "#110011",
-	inactive_titlebar_bg = "#110011",
+	active_titlebar_bg = "#111111",
 }
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = true
@@ -18,10 +17,10 @@ config.tab_bar_at_bottom = true
 
 -- Pixels
 config.window_padding = {
-	left = 8,
-	right = 8,
-	top = 8,
-	bottom = 8,
+	left = 4,
+	right = 4,
+	top = "0.5cell",
+	bottom = 0,
 }
 
 -- Fonts
