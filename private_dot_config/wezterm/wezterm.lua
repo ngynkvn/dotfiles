@@ -7,7 +7,7 @@ config.background = require("lua/background")
 
 -- Window
 config.window_frame = {
-	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold" }),
+	font = wezterm.font("Iosevka Nerd Font", { weight = "Bold" }),
 	font_size = 14.0,
 	active_titlebar_bg = "#111111",
 }
@@ -26,15 +26,15 @@ config.window_padding = {
 
 -- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
-
 -- Fonts
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "ExtraLight" })
-config.font_size = 14.0
+config.font = wezterm.font("Iosevka Nerd Font", { weight = "Regular" })
+
+config.font_size = 16.0
 -- Make bold really stand out
 config.font_rules = {
 	{
 		intensity = "Bold",
-		font = wezterm.font("JetBrainsMono Nerd Font", { foreground = "#f1a26e" }),
+		font = wezterm.font("Iosevka Nerd Font", { foreground = "#f1a26e" }),
 	},
 }
 
