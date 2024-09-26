@@ -27,14 +27,14 @@ config.window_padding = {
 -- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
-config.font = wezterm.font("Iosevka Nerd Font", { weight = "Regular" })
+config.font = wezterm.font("Lilex Nerd Font", { weight = "Regular" })
 
-config.font_size = 16.0
+config.font_size = 14.0
 -- Make bold really stand out
 config.font_rules = {
 	{
 		intensity = "Bold",
-		font = wezterm.font("Iosevka Nerd Font", { foreground = "#f1a26e" }),
+		font = wezterm.font("Lilex Nerd Font", { foreground = "#f1a26e" }),
 	},
 }
 

@@ -40,10 +40,11 @@ $(git diff HEAD -- $ignored | /bin/cat)
         set_color 5261a9
         llama-cli \
             --no-display-prompt \
+            --no-warmup --simple-io \
             -m $MODEL_PATH \
             -f $promptfile \
             -fa -n $NTOKENS -c $CTXSIZE \
-            --grammar-file $GRAMMAR
+            --grammar-file $GRAMMAR 2>/dev/null
         #--log-disable \
         set_color normal
         rm $promptfile
