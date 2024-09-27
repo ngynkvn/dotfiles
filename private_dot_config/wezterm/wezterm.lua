@@ -1,19 +1,11 @@
-local wezterm = require("wezterm")
+local wezterm = require("wezterm") --[[@as Wezterm]]
 local config = wezterm.config_builder()
 
-require("lua/tab")
+require("lua/tab").setup(config)
 config.colors = require("lua/colors")
 config.background = require("lua/background")
 
--- Window
-config.window_frame = {
-	font = wezterm.font("Iosevka Nerd Font", { weight = "Bold" }),
-	font_size = 14.0,
-	active_titlebar_bg = "#111111",
-}
-
 config.window_decorations = "RESIZE"
-config.use_fancy_tab_bar = true
 config.tab_bar_at_bottom = true
 
 -- Pixels
@@ -28,11 +20,10 @@ config.window_padding = {
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
 config.font = wezterm.font("Lilex Nerd Font", { weight = "Regular" })
-
 config.font_size = 14.0
--- Make bold really stand out
 config.font_rules = {
 	{
+		-- Make bold really stand out
 		intensity = "Bold",
 		font = wezterm.font("Lilex Nerd Font", { foreground = "#f1a26e" }),
 	},
