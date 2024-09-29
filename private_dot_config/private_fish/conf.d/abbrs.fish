@@ -1,3 +1,5 @@
+abbr --add -- zbr 'zig build run'
+abbr --add -- zb 'zig build'
 
 abbr --add -- hfc 'huggingface-cli download --local-dir ~/.local/llama.cpp/models/'
 

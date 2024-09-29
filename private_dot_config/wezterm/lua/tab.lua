@@ -25,14 +25,12 @@ function M.title(tab, max_width)
 		title = wezterm.format({ { Foreground = { AnsiColor = i.color } }, { Text = i.icon } }) .. " " .. (other or "")
 	end
 
-	title = wezterm.truncate_right(title, max_width - 3)
 	return " " .. title .. " "
 end
 
 ---@param config Config
 function M.setup(config)
 	config.use_fancy_tab_bar = true
-	config.tab_max_width = 32
 	config.tab_bar_at_bottom = true
 	config.hide_tab_bar_if_only_one_tab = false
 
