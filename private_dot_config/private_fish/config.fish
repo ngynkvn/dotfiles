@@ -31,3 +31,8 @@ fzf_configure_bindings --directory=\e`
 
 set fish_greeting
 set --export FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*" --preview="_fzf_preview_file {}"'
+
+# Zig
+set --export ZVM_INSTALL "$HOME/.zvm/self"
+fish_add_path "$HOME/.zvm/bin"
+fish_add_path "$ZVM_INSTALL"
