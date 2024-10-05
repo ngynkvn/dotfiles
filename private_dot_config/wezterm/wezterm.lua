@@ -36,4 +36,8 @@ config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 config.cursor_blink_rate = 800
 
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	config.default_domain = "WSL:Ubuntu-22.04"
+end
+
 return config
