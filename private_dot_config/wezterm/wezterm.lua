@@ -16,18 +16,25 @@ config.window_padding = {
 	bottom = 0,
 }
 
+-- I'm very indecisive
+local font = ""
+font = "Lilex"
+font = "Input Mono Narrow"
+font = "Input Mono Condensed"
+font = "Monaspace Neon Var"
+
 -- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
+config.font = wezterm.font(font, { weight = "Regular" })
 config.font_size = 13
 config.font_rules = {
 	{
 		-- Make bold really stand out
 		intensity = "Bold",
-		font = wezterm.font("JetBrains Mono", { foreground = "#f1a26e" }),
+		font = wezterm.font(font, { foreground = "#f1a26e" }),
 	},
 }
-config.anti_alias_custom_block_glyphs = false
 
 -- Cursor
 config.default_cursor_style = "BlinkingBlock"

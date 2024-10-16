@@ -36,7 +36,7 @@ function M.setup(config)
 
 	---@diagnostic disable-next-line: missing-fields
 	config.window_frame = {
-		font = wezterm.font("Iosevka Nerd Font", { weight = "Bold" }),
+		font = wezterm.font("Input Mono Narrow", { weight = "Regular" }),
 		font_size = 14.0,
 		active_titlebar_bg = "#111111",
 	}
