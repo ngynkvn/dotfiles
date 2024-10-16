@@ -2,6 +2,7 @@ local wezterm = require("wezterm") --[[@as Wezterm]]
 local config = wezterm.config_builder()
 
 require("lua/tab").setup(config)
+require("lua/keys").setup(config)
 config.colors = require("lua/colors")
 config.background = require("lua/background")
 
@@ -16,18 +17,29 @@ config.window_padding = {
 	bottom = 0,
 }
 
+-- I'm very indecisive
+local font = {} -- [[@type FontAttributes]]
+font = { family = "Lilex" }
+font = { family = "Input Mono Narrow" }
+font = { family = "Input Mono Condensed" }
+font = {
+	family = "Monaspace Neon Var",
+	weight = 400,
+	font_size = 16,
+	harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "liga", "calt" },
+}
 -- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
-config.font_size = 13
+config.font = wezterm.font(font)
+config.font_size = font.font_size or 14
 config.font_rules = {
 	{
 		-- Make bold really stand out
 		intensity = "Bold",
-		font = wezterm.font("JetBrains Mono", { foreground = "#f1a26e" }),
+		font = wezterm.font(font, { foreground = "#f1a26e" }),
 	},
 }
-config.anti_alias_custom_block_glyphs = false
 
 -- Cursor
 config.default_cursor_style = "BlinkingBlock"
