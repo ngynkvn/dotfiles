@@ -22,9 +22,8 @@ font = "Lilex"
 font = "Input Mono Narrow"
 font = "Input Mono Condensed"
 font = "Monaspace Neon Var"
+--font = "Comic Mono"
 
--- Dim inactive pane
-config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
 config.font = wezterm.font(font, { weight = "Regular" })
 config.font_size = 13
@@ -35,6 +34,8 @@ config.font_rules = {
 		font = wezterm.font(font, { foreground = "#f1a26e" }),
 	},
 }
+-- Dim inactive pane
+config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 
 -- Cursor
 config.default_cursor_style = "BlinkingBlock"
