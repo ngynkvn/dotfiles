@@ -19,15 +19,15 @@ config.window_padding = {
 -- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
-config.font = wezterm.font("Lilex Nerd Font", { weight = "Regular" })
-config.font_size = 14.0
+config.font_size = 13
 config.font_rules = {
 	{
 		-- Make bold really stand out
 		intensity = "Bold",
-		font = wezterm.font("Lilex Nerd Font", { foreground = "#f1a26e" }),
+		font = wezterm.font("JetBrains Mono", { foreground = "#f1a26e" }),
 	},
 }
+config.anti_alias_custom_block_glyphs = false
 
 -- Cursor
 config.default_cursor_style = "BlinkingBlock"
