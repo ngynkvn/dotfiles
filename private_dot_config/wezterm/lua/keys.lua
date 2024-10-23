@@ -13,8 +13,8 @@ local DisabledDefaults = {
 
 function M.setup(config)
 	config.keys = {
-		{ key = "\\", mods = "CMD", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-		{ key = "-", mods = "CMD", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+		{ key = "\\", mods = "ALT", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+		{ key = "-", mods = "ALT", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
 		{ key = "w", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Up") },
 		{ key = "a", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Left") },
 		{ key = "s", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Down") },

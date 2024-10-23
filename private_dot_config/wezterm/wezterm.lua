@@ -25,14 +25,13 @@ font = { family = "Input Mono Condensed" }
 font = {
 	family = "Monaspace Neon Var",
 	weight = 400,
-	font_size = 16,
 	harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "liga", "calt" },
 }
 -- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
 config.font = wezterm.font(font)
-config.font_size = font.font_size or 14
+config.font_size = 14
 config.font_rules = {
 	{
 		-- Make bold really stand out
