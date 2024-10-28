@@ -19,7 +19,6 @@ config.window_padding = {
 -- I'm very indecisive
 local font = {} -- [[@type FontAttributes]]
 font = { family = "Lilex" }
-font = { family = "Input Mono Narrow" }
 font = { family = "Input Mono Condensed" }
 font = {
 	family = "Monaspace Neon Var",
@@ -30,9 +29,9 @@ font = {
 }
 font = {
 	family = "Iosevka Term",
+	weight = 500,
 	harfbuzz_features = { "liga", "calt" },
 }
--- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
 config.font = wezterm.font_with_fallback({
