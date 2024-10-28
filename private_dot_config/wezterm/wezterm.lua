@@ -5,7 +5,6 @@ require("lua/tab").setup(config)
 require("lua/keys").setup(config)
 config.colors = require("lua/colors")
 config.background = require("lua/background")
-
 config.window_decorations = "RESIZE"
 config.tab_bar_at_bottom = true
 
@@ -31,6 +30,7 @@ font = {
 }
 font = {
 	family = "Iosevka Term",
+	harfbuzz_features = { "liga", "calt" },
 }
 -- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
