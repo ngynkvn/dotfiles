@@ -1,5 +1,5 @@
 local wezterm = require("wezterm") --[[@as Wezterm]]
-local config = wezterm.config_builder()
+local config = wezterm.config_builder() ---@class Config
 
 require("lua/tab").setup(config)
 require("lua/keys").setup(config)
@@ -24,8 +24,10 @@ font = { family = "Input Mono Narrow" }
 font = { family = "Input Mono Condensed" }
 font = {
 	family = "Monaspace Neon Var",
-	weight = 400,
-	harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "liga", "calt" },
+	attributes = {
+		weight = 400,
+		harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "liga", "calt" },
+	},
 }
 font = {
 	family = "Iosevka Term",
@@ -33,8 +35,11 @@ font = {
 -- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
-config.font = wezterm.font(font)
-config.font_size = 15
+config.font = wezterm.font_with_fallback({
+	font,
+	{ family = "Symbols Nerd Font Mono", weight = "Regular", stretch = "Normal", style = "Normal", scale = 0.8 },
+})
+config.font_size = 16
 config.font_rules = {
 	{
 		-- Make bold really stand out
