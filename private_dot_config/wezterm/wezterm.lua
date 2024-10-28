@@ -34,7 +34,7 @@ font = {
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
 config.font = wezterm.font(font)
-config.font_size = 18
+config.font_size = 15
 config.font_rules = {
 	{
 		-- Make bold really stand out
