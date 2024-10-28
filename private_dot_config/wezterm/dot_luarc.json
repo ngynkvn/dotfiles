@@ -1,7 +1,0 @@
-{
-    "diagnostics.disable": [
-        "param-type-mismatch",
-        "redundant-parameter",
-        "undefined-field"
-    ]
-}
