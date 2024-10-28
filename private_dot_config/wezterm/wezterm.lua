@@ -11,9 +11,9 @@ config.tab_bar_at_bottom = true
 
 -- Pixels
 config.window_padding = {
-	left = 4,
-	right = 4,
-	top = "0.5cell",
+	left = 0,
+	right = 2,
+	top = "0.25cell",
 	bottom = 0,
 }
 
@@ -27,11 +27,14 @@ font = {
 	weight = 400,
 	harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "liga", "calt" },
 }
+font = {
+	family = "Iosevka Term",
+}
 -- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
 config.font = wezterm.font(font)
-config.font_size = 14
+config.font_size = 18
 config.font_rules = {
 	{
 		-- Make bold really stand out
