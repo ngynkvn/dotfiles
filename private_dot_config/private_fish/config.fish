@@ -18,7 +18,8 @@ type -q pnpm; and set -gx PNPM_HOME "$HOME/.local/share/pnpm"; and set -gx PATH 
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
-# rust source "$HOME/.cargo/env.fish" # For fish
+# rust
+test -e "$HOME/.cargo/env.fish"; and source "$HOME/.cargo/env.fish" # For fish
 
 # python
 type -q pyenv; and pyenv init - | source
