@@ -13,6 +13,7 @@ M.icons = {
 	["lazygit"] = {icon = wezterm.nerdfonts.cod_github,          color = "Yellow"},
 	["python"]  = {icon = wezterm.nerdfonts.cod_github,          color = "Yellow"},
 }
+local default_icon = { icon = wezterm.nerdfonts.md_fish, color = "Lime" }
 
 ---@param tab MuxTabObj
 ---@param max_width number
@@ -36,7 +37,10 @@ function M.setup(config)
 
 	---@diagnostic disable-next-line: missing-fields
 	config.window_frame = {
-		font = wezterm.font("Input Mono Narrow", { weight = "Regular" }),
+		font = wezterm.font_with_fallback(
+			{ family = "Iosevka", weight = "Regular" },
+			{ family = "Symbols Nerd Font Mono", weight = "Regular", stretch = "Normal", style = "Normal", scale = 0.8 }
+		),
 		font_size = 14.0,
 		active_titlebar_bg = "#111111",
 	}

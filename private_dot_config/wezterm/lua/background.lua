@@ -9,7 +9,7 @@ return {
 	{
 		source = { File = wezterm.home_dir .. "/.local/share/background/noise-2.png" },
 		hsb = { brightness = 0.2 },
-		opacity = 0.4,
+		opacity = 0.5,
 		height = 700,
 		width = 700,
 	},

@@ -13,19 +13,17 @@ end
 
 # pnpm
 type -q pnpm; and set -gx PNPM_HOME "$HOME/.local/share/pnpm"; and set -gx PATH "$PNPM_HOME" $PATH
-source "$HOME/.cargo/env.fish" # For fish
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
-# rust
-source "$HOME/.cargo/env.fish" # For fish
+# rust source "$HOME/.cargo/env.fish" # For fish
 
 # python
 type -q pyenv; and pyenv init - | source
 # Alt-` for directory search
-fzf_configure_bindings --directory=\cf
+fzf_configure_bindings --directory=\e`
 
 set fish_greeting
 
@@ -37,4 +35,4 @@ fish_add_path "$ZVM_INSTALL"
 #?
 #set -Ux PLAN9 /usr/local/plan9
 #fish_add_path --append "$PLAN9/bin"
-EMSDK_QUIET=1 source ~/dev/source/emsdk/emsdk_env.fish
+EMSDK_QUIET=1 type -q ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source/emsdk/emsdk_env.fish

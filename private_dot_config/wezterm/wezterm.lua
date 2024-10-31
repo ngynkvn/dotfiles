@@ -1,11 +1,14 @@
 local wezterm = require("wezterm") --[[@as Wezterm]]
-local config = wezterm.config_builder()
+local ext = require("extensions")
+local config = wezterm.config_builder() ---@class Config
+
+Colorscheme = "catppuccin-mocha" -->>
 
 require("lua/tab").setup(config)
 require("lua/keys").setup(config)
-config.colors = require("lua/colors")
+config.color_scheme = Colorscheme
+--config.colors = require("lua/colors")
 config.background = require("lua/background")
-
 config.window_decorations = "RESIZE"
 config.tab_bar_at_bottom = true
 
@@ -20,21 +23,26 @@ config.window_padding = {
 -- I'm very indecisive
 local font = {} -- [[@type FontAttributes]]
 font = { family = "Lilex" }
-font = { family = "Input Mono Narrow" }
 font = { family = "Input Mono Condensed" }
 font = {
 	family = "Monaspace Neon Var",
-	weight = 400,
-	harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "liga", "calt" },
+	attributes = {
+		weight = 400,
+		harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "liga", "calt" },
+	},
 }
 font = {
 	family = "Iosevka Term",
+	weight = 500,
+	harfbuzz_features = { "liga", "calt" },
 }
--- Dim inactive pane
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 -- Fonts
-config.font = wezterm.font(font)
-config.font_size = 15
+config.font = wezterm.font_with_fallback({
+	font,
+	{ family = "Symbols Nerd Font Mono", weight = "Regular", stretch = "Normal", style = "Normal", scale = 0.8 },
+})
+config.font_size = 16
 config.font_rules = {
 	{
 		-- Make bold really stand out
@@ -53,5 +61,17 @@ config.cursor_blink_rate = 800
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.default_domain = "WSL:Ubuntu-22.04"
 end
+
+wezterm.on("augment-command-palette", function(window, pane)
+	return {
+		{
+			brief = "Theme Switcher",
+			-- TODO: font icon?
+			icon = "md_rename_box",
+
+			action = wezterm.action_callback(ext.theme_switcher),
+		},
+	}
+end)
 
 return config
