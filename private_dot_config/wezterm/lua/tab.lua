@@ -37,10 +37,16 @@ function M.setup(config)
 
 	---@diagnostic disable-next-line: missing-fields
 	config.window_frame = {
-		font = wezterm.font_with_fallback(
+		font = wezterm.font_with_fallback({
 			{ family = "Iosevka", weight = "Regular" },
-			{ family = "Symbols Nerd Font Mono", weight = "Regular", stretch = "Normal", style = "Normal", scale = 0.8 }
-		),
+			{
+				family = "Symbols Nerd Font Mono",
+				weight = "Regular",
+				stretch = "Normal",
+				style = "Normal",
+				scale = 0.8,
+			},
+		}),
 		font_size = 14.0,
 		active_titlebar_bg = "#111111",
 	}
