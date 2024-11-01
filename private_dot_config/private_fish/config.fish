@@ -37,3 +37,4 @@ fish_add_path "$ZVM_INSTALL"
 #set -Ux PLAN9 /usr/local/plan9
 #fish_add_path --append "$PLAN9/bin"
 EMSDK_QUIET=1 type -q ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source/emsdk/emsdk_env.fish
+set --export EDITOR=vim
