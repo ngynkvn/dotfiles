@@ -32,14 +32,20 @@ fish_add_path "$ZVM_INSTALL"
 EMSDK_QUIET=1 type -q ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source/emsdk/emsdk_env.fish
 
 if status is-interactive
-    # Alt-` for directory search
-    fzf_configure_bindings --directory=\e` --history
     set fish_greeting
+    # Alt-` for directory search
+    if ! command -v fzf_configure_bindings &>/dev/null
+        fzf_configure_bindings --directory=\e` --history
+    end
 
-    set -gx ATUIN_NOBIND true
-    atuin init fish | source
-    # bind to ctrl-r in normal and insert mode, add any other bindings you want here too
-    bind \cr _atuin_search
-    bind -M insert \cr _atuin_search
-    batman --export-env | source
+    if ! command -v atuin &>/dev/null
+        set -gx ATUIN_NOBIND true
+        atuin init fish | source
+        # bind to ctrl-r in normal and insert mode, add any other bindings you want here too
+        bind \cr _atuin_search
+        bind -M insert \cr _atuin_search
+    end
+    if ! command -v batman &>/dev/null
+        batman --export-env | source
+    end
 end
