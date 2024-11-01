@@ -1,8 +1,7 @@
 local wezterm = require("wezterm") --[[@as Wezterm]]
-local ext = require("extensions")
-local config = wezterm.config_builder() ---@class Config
 local fonts = require("fonts")
 
+local config = wezterm.config_builder() ---@class Config
 require("lua/tab").setup(config)
 require("lua/keys").setup(config)
 config.color_scheme = "catppuccin-mocha"

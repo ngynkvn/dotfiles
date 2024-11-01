@@ -13,7 +13,6 @@ M.icons = {
 	["lazygit"] = {icon = wezterm.nerdfonts.cod_github,          color = "Yellow"},
 	["python"]  = {icon = wezterm.nerdfonts.cod_github,          color = "Yellow"},
 }
-local default_icon = { icon = wezterm.nerdfonts.md_fish, color = "Lime" }
 
 ---@param tab MuxTabObj
 ---@param max_width number
