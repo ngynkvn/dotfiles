@@ -1,15 +1,3 @@
-if status is-interactive
-    # Alt-` for directory search
-    fzf_configure_bindings --directory=\e` --history
-    set fish_greeting
-
-    set -gx ATUIN_NOBIND true
-    atuin init fish | source
-    # bind to ctrl-r in normal and insert mode, add any other bindings you want here too
-    bind \cr _atuin_search
-    bind -M insert \cr _atuin_search
-end
-
 # replaced by `fisher install kidonng/zoxide.fish`
 # zoxide init --cmd cd fish | source
 
@@ -42,3 +30,16 @@ fish_add_path "$ZVM_INSTALL"
 #set -Ux PLAN9 /usr/local/plan9
 #fish_add_path --append "$PLAN9/bin"
 EMSDK_QUIET=1 type -q ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source/emsdk/emsdk_env.fish
+
+if status is-interactive
+    # Alt-` for directory search
+    fzf_configure_bindings --directory=\e` --history
+    set fish_greeting
+
+    set -gx ATUIN_NOBIND true
+    atuin init fish | source
+    # bind to ctrl-r in normal and insert mode, add any other bindings you want here too
+    bind \cr _atuin_search
+    bind -M insert \cr _atuin_search
+    batman --export-env | source
+end
