@@ -1,4 +1,13 @@
 if status is-interactive
+    # Alt-` for directory search
+    fzf_configure_bindings --directory=\e` --history
+    set fish_greeting
+
+    set -gx ATUIN_NOBIND true
+    atuin init fish | source
+    # bind to ctrl-r in normal and insert mode, add any other bindings you want here too
+    bind \cr _atuin_search
+    bind -M insert \cr _atuin_search
 end
 
 # replaced by `fisher install kidonng/zoxide.fish`
@@ -23,10 +32,6 @@ test -e "$HOME/.cargo/env.fish"; and source "$HOME/.cargo/env.fish" # For fish
 
 # python
 type -q pyenv; and pyenv init - | source
-# Alt-` for directory search
-fzf_configure_bindings --directory=\e`
-
-set fish_greeting
 
 # Zig
 set --export ZVM_INSTALL "$HOME/.zvm/self"
@@ -37,4 +42,3 @@ fish_add_path "$ZVM_INSTALL"
 #set -Ux PLAN9 /usr/local/plan9
 #fish_add_path --append "$PLAN9/bin"
 EMSDK_QUIET=1 type -q ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source/emsdk/emsdk_env.fish
-set --export EDITOR=vim
