@@ -20,16 +20,28 @@ function lldiff
     end
     echo "ignoring: $ignored"
 
-    set system_prompt "\
-You are a helpful assistant that generates commit messages. 
-Write short commit messages that includes details based on the diff output that the user provides 
-The message should only be one sentence that captures as much detail as possible.
-Write ONLY the commit message, and nothing else.
+    set system_prompt '\
+You are a commit message generator that follows the Conventional Commits specification.
+
+Input: Git diff output
+Output: A single-line commit message following this format:
+<type>[(scope)]: <description>
+
+Rules:
+- Types must be one of: feat, fix, chore, docs, style, refactor, perf, test
+- Include scope in parentheses when changes affect a specific component/module
+- Description should be present tense, imperative mood (e.g., "add" not "adds" or "added")
+- Mention specific technical details when significant (function names, key variables, etc.)
+- Keep total message length under 72 characters when possible
+- Don\'t mention obvious details like "update file" or "modify code"
+
 Examples:
-    - feat: implement JWT-based authentication system for secure user sessions
-    - feat: add command line parsing and subcommands
-    - fix: correct user session timeout issue by adjusting token expiration handling
-    - chore: upgrade to latest version of Node.js and update dependency lockfile"
+feat(auth): implement JWT-based session management
+fix(api): handle null response in user validation
+refactor(db): optimize query performance with indexes
+docs(readme): add API authentication instructions
+perf(search): reduce memory usage in indexing logic\
+'
     set user_prompt "\
 <diff>
 $(git diff HEAD -- $ignored | /bin/cat)

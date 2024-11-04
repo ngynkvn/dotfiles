@@ -8,6 +8,6 @@ return function(config)
 	config.font_size = 16
 	config.font_rules = {
 		-- Make bold really stand out
-		{ intensity = "Bold", font = wezterm.font({ foreground = "#f1a26e" }) },
+		{ intensity = "Bold", font = wezterm.font(font, { foreground = "#f1a26e" }) },
 	}
 end

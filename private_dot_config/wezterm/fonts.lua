@@ -7,6 +7,7 @@ local M = {
 		["Input Mono Condensed"] = require("font-config.input-mono"),
 		["Monaspace Neon Var"] = require("font-config.monaspace-neon"),
 		["Iosevka Term"] = require("font-config.iosevka-term"),
+		["CartographCF Nerd Font Mono"] = require("font-config.cartograph-cf"),
 	},
 }
 
