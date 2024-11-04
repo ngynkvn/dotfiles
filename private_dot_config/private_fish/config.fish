@@ -1,3 +1,8 @@
+if test -n $GHOSTTY_RESOURCES_DIR
+    source $GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
+end
+set -gx EDITOR nvim
+
 # replaced by `fisher install kidonng/zoxide.fish`
 # zoxide init --cmd cd fish | source
 
@@ -16,7 +21,7 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 # rust
-test -e "$HOME/.cargo/env.fish"; and source "$HOME/.cargo/env.fish" # For fish
+test -e "$CARGO_HOME/env.fish"; and source "$CARGO_HOME/env.fish" # For fish
 
 # python
 type -q pyenv; and pyenv init - | source
