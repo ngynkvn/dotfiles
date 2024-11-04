@@ -269,7 +269,7 @@ grapheme-width-method = unicode
 theme = "catppuccin-mocha"
 
 # Background color for the window.
-#background = #282c34
+background = #000d06
 
 # Foreground color for the window.
 #foreground = #ffffff
