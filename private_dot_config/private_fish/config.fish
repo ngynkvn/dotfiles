@@ -1,5 +1,5 @@
-if test -n $GHOSTTY_RESOURCES_DIR
-    source $GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
+if type -q direnv
+    direnv hook fish | source
 end
 set -gx EDITOR nvim
 
@@ -23,9 +23,6 @@ set --export PATH $BUN_INSTALL/bin $PATH
 # rust
 test -e "$CARGO_HOME/env.fish"; and source "$CARGO_HOME/env.fish" # For fish
 
-# python
-type -q pyenv; and pyenv init - | source
-
 # Zig
 set --export ZVM_INSTALL "$HOME/.zvm/self"
 fish_add_path "$HOME/.zvm/bin"
@@ -34,13 +31,14 @@ fish_add_path "$ZVM_INSTALL"
 #?
 #set -Ux PLAN9 /usr/local/plan9
 #fish_add_path --append "$PLAN9/bin"
-EMSDK_QUIET=1 type -q ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source/emsdk/emsdk_env.fish
+set -gx EMSDK_QUIET 1
+test -e ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source/emsdk/emsdk_env.fish
 
 if status is-interactive
     set fish_greeting
-    # Alt-` for directory search
-    if command -v fzf_configure_bindings &>/dev/null
-        fzf_configure_bindings --directory=\e` --history
+    # Alt-q for directory search
+    if type -q fzf_configure_bindings &>/dev/null
+        fzf_configure_bindings --directory=\eq --history
     end
 
     if command -v atuin &>/dev/null
