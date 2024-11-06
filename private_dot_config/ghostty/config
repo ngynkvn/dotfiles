@@ -13,6 +13,7 @@ font-size = 16
 theme = rose-pine
 #background = #000d06
 #foreground = #cdd6f4
+selection-invert-fg-bg = true
 
 command = /opt/homebrew/bin/fish
 
@@ -104,4 +105,4 @@ keybind = super+alt+up=goto_split:top
 macos-option-as-alt = true
 
 click-repeat-interval = 500
-bold-is-bright = true
+#bold-is-bright = true
