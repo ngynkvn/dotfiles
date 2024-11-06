@@ -1,0 +1,88 @@
+#!/bin/bash
+# Initialize projects directory if it doesn't exist
+PROJECTS_FILE=${XDG_STATE_HOME:-~/.local/share}/zz_projects
+touch "$PROJECTS_FILE"
+
+# Function to manage and jump to projects
+proj() {
+  local action="$1"
+  case "$action" in
+  # Add a new project
+  "add")
+    local proj_name="${2:-$(basename "$(pwd)")}"
+    local proj_path="${3:-$(pwd)}"
+
+    echo "$proj_name:$proj_path" >>"$PROJECTS_FILE"
+    sort -u -o "$PROJECTS_FILE" "$PROJECTS_FILE" # Remove duplicates and sort
+    echo "Added project: $proj_name -> $proj_path"
+    ;;
+
+  # Remove a project
+  "rm")
+    local selected
+    selected=$(cat "$PROJECTS_FILE" | fzf --prompt="Select project to remove > ")
+    if [[ -n "$selected" ]]; then
+      grep -v "^${selected}$" "$PROJECTS_FILE" >"${PROJECTS_FILE}.tmp"
+      mv "${PROJECTS_FILE}.tmp" "$PROJECTS_FILE"
+      echo "Removed: $selected"
+    fi
+    ;;
+
+  # List all projects
+  "ls")
+    cat "$PROJECTS_FILE" | column -t -s ':'
+    ;;
+
+  # Default: interactive selection and jump
+  *)
+    local selected
+    selected=$(cat "$PROJECTS_FILE" | fzf \
+      --prompt="Select project > " \
+      --preview 'echo {} | cut -d: -f2 | xargs ls -a --color=always' \
+      --preview-window 'right:50%' \
+      --bind 'ctrl-v:execute(nvim {2})+abort' \
+      --height 80% \
+      --border rounded \
+      --header 'CTRL-V: open in nvim | Enter: cd to directory')
+
+    if [[ -n "$selected" ]]; then
+      local proj_path=$(echo "$selected" | cut -d: -f2)
+      if [[ -d "$proj_path" ]]; then
+        cd "$proj_path" || return
+        # If an editor was specified as the first argument, open it
+        if [[ "$action" == "nvim" ]]; then
+          nvim .
+        elif [[ "$action" == "code" ]]; then
+          code .
+        fi
+      else
+        echo "Directory no longer exists: $proj_path"
+        return 1
+      fi
+    fi
+    ;;
+  esac
+}
+
+# # Optional: Add shell completion
+# _proj_complete() {
+#   local cur=${COMP_WORDS[COMP_CWORD]}
+#   local prev=${COMP_WORDS[COMP_CWORD - 1]}
+#
+#   case "$prev" in
+#   proj)
+#     COMPREPLY=($(compgen -W "add rm ls nvim code" -- "$cur"))
+#     ;;
+#   add)
+#     COMPREPLY=()
+#     ;;
+#   *)
+#     COMPREPLY=()
+#     ;;
+#   esac
+# }
+#
+# complete -F _proj_complete proj
+
+# main
+proj "$@"
