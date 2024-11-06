@@ -34,9 +34,11 @@ EMSDK_QUIET=1 type -q ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source
 
 if status is-interactive
     set fish_greeting
-    # Alt-` for directory search
-    if type -q fzf_configure_bindings &>/dev/null
-        fzf_configure_bindings --directory=\e` --history
+    if command -v zoxide &>/dev/null
+        zoxide init fish --cmd cd | source
+    end
+    if command -v fzf &>/dev/null
+        fzf --fish | source
     end
 
     if command -v atuin &>/dev/null

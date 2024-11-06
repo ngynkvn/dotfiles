@@ -66,7 +66,8 @@ keybind = super+comma=open_config
 keybind = super+shift+comma=reload_config
 
 keybind = super+alt+i=inspector:toggle
-
+keybind = super+alt+ctrl+o=write_scrollback_file:open
+keybind = super+alt+ctrl+p=write_scrollback_file:paste
 
 keybind = alt+shift+equal=equalize_splits
 keybind = shift+left=adjust_selection:left
@@ -77,7 +78,6 @@ keybind = shift+end=adjust_selection:end
 keybind = shift+home=adjust_selection:home
 keybind = shift+page_down=adjust_selection:page_down
 keybind = shift+page_up=adjust_selection:page_up
-keybind = super+alt+shift+j=write_scrollback_file:open
 keybind = super+alt+shift+w=close_all_windows
 keybind = super+end=scroll_to_bottom
 keybind = super+home=scroll_to_top
@@ -87,7 +87,6 @@ keybind = super+page_down=scroll_page_down
 keybind = super+page_up=scroll_page_up
 keybind = super+shift+down=jump_to_prompt:1
 keybind = super+shift+enter=toggle_split_zoom
-keybind = super+shift+j=write_scrollback_file:paste
 keybind = super+shift+up=jump_to_prompt:-1
 
 keybind = super+shift+left_bracket=previous_tab
