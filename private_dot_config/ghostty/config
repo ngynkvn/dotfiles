@@ -11,8 +11,8 @@ font-size = 14
 
 # Theme
 theme = rose-pine
-#background = #000d06
-#foreground = #cdd6f4
+background = #070d06
+foreground = #cdd6f4
 minimum-contrast = 1
 selection-invert-fg-bg = true
 
