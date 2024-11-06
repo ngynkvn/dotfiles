@@ -13,6 +13,7 @@ font-size = 14
 theme = rose-pine
 #background = #000d06
 #foreground = #cdd6f4
+minimum-contrast = 2
 selection-invert-fg-bg = true
 
 command = /opt/homebrew/bin/fish
@@ -109,4 +110,4 @@ bold-is-bright = true
 window-decoration = true
 window-save-state = always
 macos-window-shadow = false
-custom-shader =
+#custom-shader = /Users/knguyen189/.config/ghostty/shaders/starfield.glsl

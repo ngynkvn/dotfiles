@@ -18,8 +18,9 @@ set --export PATH $BUN_INSTALL/bin $PATH
 # rust
 test -e "$HOME/.cargo/env.fish"; and source "$HOME/.cargo/env.fish" # For fish
 
-# python
-type -q pyenv; and pyenv init - | source
+# python 
+# NOTE: use `uv` now
+# type -q pyenv; and pyenv init - | source
 
 # Zig
 set --export ZVM_INSTALL "$HOME/.zvm/self"
