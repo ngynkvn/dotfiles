@@ -1,4 +1,7 @@
 tmp/
 *.tmp.*
 journal/
+.vscode
+.aider*
+*.tmp*
 notes/

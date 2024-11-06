@@ -31,8 +31,6 @@ fish_add_path "$ZVM_INSTALL"
 #?
 #set -Ux PLAN9 /usr/local/plan9
 #fish_add_path --append "$PLAN9/bin"
-set -gx EMSDK_QUIET 1
-test -e ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source/emsdk/emsdk_env.fish
 
 if status is-interactive
     set fish_greeting
