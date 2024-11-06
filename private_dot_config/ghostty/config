@@ -10,20 +10,20 @@ font-style-bold-italic = Bold Oblique
 font-size = 16
 
 # Theme
-theme = catppuccin-mocha
-background = #000d06
-foreground = #cdd6f4
+theme = rose-pine
+#background = #000d06
+#foreground = #cdd6f4
 
 command = /opt/homebrew/bin/fish
 
-keybind = alt+h=goto_split:left
-keybind = alt+j=goto_split:bottom
-keybind = alt+k=goto_split:top
-keybind = alt+l=goto_split:right
-keybind = super+alt+h=resize_split:left,10
-keybind = super+alt+j=resize_split:down,10
-keybind = super+alt+k=resize_split:up,10
-keybind = super+alt+l=resize_split:right,10
+keybind = super+shift+h=goto_split:left
+keybind = super+shift+j=goto_split:bottom
+keybind = super+shift+k=goto_split:top
+keybind = super+shift+l=goto_split:right
+keybind = alt+shift+h=resize_split:left,10
+keybind = alt+shift+j=resize_split:down,10
+keybind = alt+shift+k=resize_split:up,10
+keybind = alt+shift+l=resize_split:right,10
 
 keybind = alt+left_bracket=goto_split:previous
 keybind = alt+right_bracket=goto_split:next
@@ -101,6 +101,7 @@ keybind = super+ctrl+right=resize_split:right,10
 keybind = super+alt+left=goto_split:left
 keybind = super+alt+up=goto_split:top
 
+macos-option-as-alt = true
 
 click-repeat-interval = 500
 bold-is-bright = true
