@@ -13,7 +13,7 @@ font-size = 14
 theme = rose-pine
 #background = #000d06
 #foreground = #cdd6f4
-minimum-contrast = 2
+minimum-contrast = 1
 selection-invert-fg-bg = true
 
 command = /opt/homebrew/bin/fish
