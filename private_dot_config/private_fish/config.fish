@@ -1,3 +1,4 @@
+
 # replaced by `fisher install kidonng/zoxide.fish`
 # zoxide init --cmd cd fish | source
 
@@ -51,4 +52,5 @@ if status is-interactive
     if command -v batman &>/dev/null
         batman --export-env | source
     end
+    set -a MANPATH /Users/ngynkvn/.local/share/man
 end
