@@ -3,4 +3,4 @@ packages:
     brews: [ripgrep, curl, fish, lsd, fzf, bat, git, neovim, fd, jq]
     casks: []
   debian:
-    apt: [ripgrep, curl, fish, lsd, fzf, bat, git, neovim, fd, find, jq]
+    apt: [ripgrep, curl, fish, lsd, fzf, bat, git, neovim, fd-find, jq]
