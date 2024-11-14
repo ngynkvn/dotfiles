@@ -3,9 +3,6 @@
 #!/bin/bash
 
 apt update
-apt install {{ range .packages.debian.apt -}}
-{{ . | quote }}
-{{ end -}}
-EOF
+apt install {{ range .packages.debian.apt }} {{ . | quote }} {{ end }}
 {{ end -}}
 {{ end -}}
