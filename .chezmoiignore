@@ -14,3 +14,4 @@ Dockerfile
 .config/fish/functions/epxy.fish
 .local/llama.cpp/models/*
 .DS_Store
+build.sh

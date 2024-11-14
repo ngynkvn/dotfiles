@@ -2,9 +2,9 @@
 {{ if eq .chezmoi.osRelease.id "debian" -}}
 #!/bin/bash
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
-{{ range .packages.debian.apt -}}
-apt install {{ . | quote }}
+apt update
+apt install {{ range .packages.debian.apt -}}
+{{ . | quote }}
 {{ end -}}
 EOF
 {{ end -}}

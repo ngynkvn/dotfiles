@@ -1,4 +1,4 @@
-
+set -gx EDITOR nvim
 # replaced by `fisher install kidonng/zoxide.fish`
 # zoxide init --cmd cd fish | source
 
@@ -39,6 +39,7 @@ if status is-interactive
         zoxide init fish --cmd cd | source
     end
     if command -v fzf &>/dev/null
+        set FZF_CTRL_R_COMMAND ''
         fzf --fish | source
     end
 

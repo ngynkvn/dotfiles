@@ -10,6 +10,7 @@ packages:
       - git
       - neovim
       - fd
+      - jq
     casks: []
   debian:
     apt:
@@ -22,3 +23,4 @@ packages:
       - git
       - neovim
       - fd-find
+      - jq
