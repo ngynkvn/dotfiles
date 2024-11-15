@@ -1,14 +1,13 @@
-# Fonts
-font-family = Iosevka Term
-# font-family-bold = Victor Mono
-# font-family-italic = Victor Mono
-# font-family-bold-italic = Victor Mono
-# font-style = Medium
-# font-style-bold = Bold
-# font-style-italic = Oblique
-# font-style-bold-italic = Bold Oblique
-font-size = 14
-font-feature = ss01
+# --- Fonts ---
+#font-family = Input Mono Compressed
+#font-family = Iosevka Term
+#font-family = Menlo
+#font-family = Lilex
+#font-family = Rec Mono Duotone
+#font-family = Monaspace Krypton Var
+font-family = M PLUS Code Latin
+font-style = Medium
+font-size = 15
 
 # Theme
 theme = rose-pine
@@ -103,6 +102,12 @@ keybind = super+ctrl+right=resize_split:right,10
 keybind = super+alt+left=goto_split:left
 keybind = super+alt+up=goto_split:top
 
+# Global quick terminal
+keybind = global:super+grave_accent=toggle_quick_terminal
+quick-terminal-position = left
+quick-terminal-animation-duration = 0.15
+
+
 macos-option-as-alt = true
 
 click-repeat-interval = 500
@@ -110,4 +115,6 @@ bold-is-bright = true
 window-decoration = true
 window-save-state = always
 macos-window-shadow = false
+background-opacity = 0.95
+background-blur-radius = 20
 #custom-shader = /Users/knguyen189/.config/ghostty/shaders/starfield.glsl

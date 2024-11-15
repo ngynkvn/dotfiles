@@ -1,40 +1,22 @@
-set -gx EDITOR nvim
-# replaced by `fisher install kidonng/zoxide.fish`
-# zoxide init --cmd cd fish | source
+# NOTE: conf.d is sourced first
 
-## OSX ##
-type -q brew; or if test -e /opt/homebrew/bin/brew
-    eval $(/opt/homebrew/bin/brew shellenv)
-    test -d (brew --prefix)"/share/fish/completions"; and set -p fish_complete_path (brew --prefix)/share/fish/completions
-    test -d (brew --prefix)"/share/fish/vendor_completions.d"; and set -p fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
-end
+set -x EDITOR nvim
 
-# pnpm
-type -q pnpm; and set -gx PNPM_HOME "$HOME/.local/share/pnpm"; and set -gx PATH "$PNPM_HOME" $PATH
+type -q pnpm; and set -x PNPM_HOME "$HOME/.local/share/pnpm"; and fish_add_path $PNPM_HOME
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+set -x BUN_INSTALL "$HOME/.bun"
+fish_add_path "$BUN_INSTALL/bin"
 
-# rust
-test -e "$HOME/.cargo/env.fish"; and source "$HOME/.cargo/env.fish" # For fish
+test -e "$HOME/.cargo/env.fish"; and source "$HOME/.cargo/env.fish"
 
-# python 
-# NOTE: use `uv` now
-# type -q pyenv; and pyenv init - | source
-
-# Zig
 set --export ZVM_INSTALL "$HOME/.zvm/self"
 fish_add_path "$HOME/.zvm/bin"
 fish_add_path "$ZVM_INSTALL"
 
-#?
-#set -Ux PLAN9 /usr/local/plan9
-#fish_add_path --append "$PLAN9/bin"
 EMSDK_QUIET=1 type -q ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source/emsdk/emsdk_env.fish
 
+set fish_greeting
 if status is-interactive
-    set fish_greeting
     if command -v zoxide &>/dev/null
         zoxide init fish --cmd cd | source
     end
@@ -44,7 +26,7 @@ if status is-interactive
     end
 
     if command -v atuin &>/dev/null
-        set -gx ATUIN_NOBIND true
+        set -x ATUIN_NOBIND true
         atuin init fish | source
         # bind to ctrl-r in normal and insert mode, add any other bindings you want here too
         bind \cr _atuin_search
@@ -55,3 +37,5 @@ if status is-interactive
     end
     set -a MANPATH /Users/ngynkvn/.local/share/man
 end
+
+fish_add_path $HOME/.cache/lm-studio/bin

@@ -20,10 +20,10 @@ function last_history_item
 end
 abbr -a !! --position anywhere --function last_history_item
 
-# with a "cless" abbr
+# with a "le" abbr
 # E.g. `git cless<SPACE>` turns into `git --color=always | less -R --quit-if-one-screen
 # with the cursor in front of the pipe
-function cless
+function le
     # Abbr. Try to add a "--color=always" option and pipe to less.
     # If we don't recognize the command, we still pipe to less.
     # (alternative is to write an empty string and return 0 to eliminate the abbr key)
@@ -41,7 +41,10 @@ function cless
 
     set -l opt
     switch "$tok[1]"
-        case grep diff ls
+        case grep rg
+            # TODO: Check for gnu version
+            set opt --json
+        case diff ls
             # TODO: Check for gnu version
             set opt --color=always
         case jq
@@ -72,7 +75,6 @@ function cless
         set opt
     end
 
-    set -l popt
     set -l pager less
     set -q PAGER
     and echo -- $PAGER | read -lat pager
@@ -81,16 +83,9 @@ function cless
         return
     end
 
-    switch $pager[1]
-        case less
-            set popt -R --quit-if-one-screen
-        case lv
-            set popt -c
-    end
-
     # We print our color option, then the cursor position,
     # and then the pager - even if we don't otherwise recognize the command
-    echo -- $opt % "| $pager $popt"
+    echo -- $opt % "| $pager"
 end
 
-abbr --add cless --function cless --set-cursor --position anywhere
+abbr --add le --function le --set-cursor --position anywhere
