@@ -18,8 +18,7 @@ config.window_padding = {
 	bottom = 0,
 }
 -- Fonts
---require("font-config.iosevka-term")(config)
-require("font-config.victor-mono")(config)
+require("font-config.iosevka-term")(config)
 config.inactive_pane_hsb = { saturation = 0.9, brightness = 0.8 }
 
 -- Cursor
