@@ -1,13 +1,14 @@
 # Fonts
-font-family = Victor Mono
+font-family = Iosevka Term
 # font-family-bold = Victor Mono
 # font-family-italic = Victor Mono
 # font-family-bold-italic = Victor Mono
-font-style = Medium
-font-style-bold = Bold
-font-style-italic = Oblique
-font-style-bold-italic = Bold Oblique
+# font-style = Medium
+# font-style-bold = Bold
+# font-style-italic = Oblique
+# font-style-bold-italic = Bold Oblique
 font-size = 14
+font-feature = ss01
 
 # Theme
 theme = rose-pine
