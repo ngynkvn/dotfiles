@@ -1,23 +1,49 @@
-# --- Fonts ---
+# Setting blocks are delineated by #>
+
+#> Fonts
+# The following block is intended to act
+# as a way to quickly inspect and font styles for programmers.
+#
+# ABC.DEF.GHI.JKL.MNO.PQRS.TUV.WXYZ
+# abc.def.ghi.jkl.mno.pqrs.tuv.wxyz
+# !iIlL17|¦ ¢coO08BDQ $5SZ2zs ∂96µm
+# float il1[]={1-2/3.4,5+6=7/8%90};
+# 1234567890 ,._-+= >< «¯-¬_» ~–÷+×
+# {*}[]()<>`+-=$/#_%^@\&|~?'" !,.;:
+# <= != == /* */ ++ ~= ... !? ?! 
+# .* ** ~~ __ -- -> <- => <== ==>
+
+# for example, if you're in vim + ghostty...
+font-family = Iosevka Term
+# change this ^^
+font-size = 16
+font-feature = ss02
+
+# Save, then refresh config with a keybind
+# Mine is the default: `keybind = super+shift+comma=reload_config`
+
+#> Other fonts
 #font-family = Input Mono Compressed
-#font-family = Iosevka Term
 #font-family = Menlo
 #font-family = Lilex
 #font-family = Rec Mono Duotone
 #font-family = Monaspace Krypton Var
-font-family = M PLUS Code Latin
-font-style = Medium
-font-size = 15
+#font-family = M PLUS Code Latin
+#font-style = Medium
 
-# Theme
+#> Theme
 theme = rose-pine
-background = #070d06
-foreground = #cdd6f4
+#background = #070d06
+#foreground = #cdd6f4
 minimum-contrast = 1
 selection-invert-fg-bg = true
 
+#> System
 command = /opt/homebrew/bin/fish
+macos-option-as-alt = true
+click-repeat-interval = 500
 
+#> Keybinds
 keybind = super+shift+h=goto_split:left
 keybind = super+shift+j=goto_split:bottom
 keybind = super+shift+k=goto_split:top
@@ -102,16 +128,14 @@ keybind = super+ctrl+right=resize_split:right,10
 keybind = super+alt+left=goto_split:left
 keybind = super+alt+up=goto_split:top
 
-# Global quick terminal
+#>Global quick terminal
 keybind = global:super+grave_accent=toggle_quick_terminal
 quick-terminal-position = left
 quick-terminal-animation-duration = 0.15
 
 
-macos-option-as-alt = true
-
-click-repeat-interval = 500
-bold-is-bright = true
+#>Pretty fluff settings
+bold-is-bright = false
 window-decoration = true
 window-save-state = always
 macos-window-shadow = false
