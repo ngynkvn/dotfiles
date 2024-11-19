@@ -16,8 +16,8 @@
 # for example, if you're in vim + ghostty...
 font-family = Iosevka Term
 # change this ^^
-font-size = 16
-font-feature = ss02
+font-size = 17
+font-feature = ss04
 
 # Save, then refresh config with a keybind
 # Mine is the default: `keybind = super+shift+comma=reload_config`
@@ -140,5 +140,5 @@ window-decoration = true
 window-save-state = always
 macos-window-shadow = false
 background-opacity = 0.95
-background-blur-radius = 20
+background-blur-radius = 40
 #custom-shader = /Users/knguyen189/.config/ghostty/shaders/starfield.glsl

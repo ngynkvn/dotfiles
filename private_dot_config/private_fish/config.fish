@@ -17,6 +17,7 @@ EMSDK_QUIET=1 type -q ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source
 
 set fish_greeting
 if status is-interactive
+    fish_hybrid_key_bindings
     if command -v zoxide &>/dev/null
         zoxide init fish --cmd cd | source
     end
@@ -36,6 +37,9 @@ if status is-interactive
         batman --export-env | source
     end
     set -a MANPATH /Users/ngynkvn/.local/share/man
+    if not status is-login
+        fish_default_key_bindings
+    end
 end
 
 fish_add_path $HOME/.cache/lm-studio/bin
