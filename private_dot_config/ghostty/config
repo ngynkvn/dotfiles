@@ -16,7 +16,7 @@
 # for example, if you're in vim + ghostty...
 font-family = Iosevka Term
 # change this ^^
-font-size = 17
+font-size = 18
 font-feature = ss04
 
 # Save, then refresh config with a keybind
@@ -48,10 +48,21 @@ keybind = super+shift+h=goto_split:left
 keybind = super+shift+j=goto_split:bottom
 keybind = super+shift+k=goto_split:top
 keybind = super+shift+l=goto_split:right
+
+keybind = super+shift+left=goto_split:left
+keybind = super+shift+down=goto_split:bottom
+keybind = super+shift+up=goto_split:top
+keybind = super+shift+right=goto_split:right
+
 keybind = alt+shift+h=resize_split:left,10
 keybind = alt+shift+j=resize_split:down,10
 keybind = alt+shift+k=resize_split:up,10
 keybind = alt+shift+l=resize_split:right,10
+
+keybind = super+alt+right=goto_split:right
+keybind = super+alt+down=goto_split:bottom
+keybind = super+alt+left=goto_split:left
+keybind = super+alt+up=goto_split:top
 
 keybind = alt+left_bracket=goto_split:previous
 keybind = alt+right_bracket=goto_split:next
@@ -116,17 +127,13 @@ keybind = super+shift+enter=toggle_split_zoom
 keybind = super+shift+up=jump_to_prompt:-1
 
 keybind = super+shift+left_bracket=previous_tab
-keybind = super+alt+right=goto_split:right
 keybind = super+enter=toggle_fullscreen
 keybind = super+shift+right_bracket=next_tab
 keybind = super+equal=increase_font_size:1
 keybind = super+ctrl+down=resize_split:down,10
 keybind = super+ctrl+left=resize_split:left,10
 keybind = super+ctrl+up=resize_split:up,10
-keybind = super+alt+down=goto_split:bottom
 keybind = super+ctrl+right=resize_split:right,10
-keybind = super+alt+left=goto_split:left
-keybind = super+alt+up=goto_split:top
 
 #>Global quick terminal
 #keybind = global:super+shift+grave_accent=toggle_quick_terminal
