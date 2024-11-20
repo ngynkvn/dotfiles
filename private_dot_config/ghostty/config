@@ -129,9 +129,9 @@ keybind = super+alt+left=goto_split:left
 keybind = super+alt+up=goto_split:top
 
 #>Global quick terminal
-keybind = global:super+grave_accent=toggle_quick_terminal
-quick-terminal-position = left
-quick-terminal-animation-duration = 0.15
+#keybind = global:super+shift+grave_accent=toggle_quick_terminal
+#quick-terminal-position = left
+#quick-terminal-animation-duration = 0.15
 
 
 #>Pretty fluff settings
