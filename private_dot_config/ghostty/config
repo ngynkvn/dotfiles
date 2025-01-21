@@ -14,6 +14,7 @@
 # .* ** ~~ __ -- -> <- => <== ==>
 
 # for example, if you're in vim + ghostty...
+#font-family = Iosevka Term
 font-family = Iosevka Term
 # change this ^^
 font-size = 16
@@ -33,7 +34,7 @@ font-feature = ss04
 
 #> Theme
 theme = rose-pine
-#background = #070d06
+background = #111019
 #foreground = #cdd6f4
 minimum-contrast = 1
 selection-invert-fg-bg = true
@@ -146,6 +147,5 @@ bold-is-bright = false
 window-decoration = true
 window-save-state = always
 macos-window-shadow = false
-background-opacity = 0.98
+background-opacity = 0.95
 background-blur-radius = 40
-#custom-shader = /Users/ngynkvn/.config/ghostty/seascape.glsl
