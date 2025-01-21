@@ -1,20 +1,27 @@
-[core]
-    pager = delta
-    excludesFile = ~/.gitignore
-[interactive]
-    diffFilter = delta --color-only
-[delta]
-    navigate = true  # use n and N to move between diff sections
-    side-by-side = true
-[merge]
-    conflictstyle = diff3
-[diff]
-    colorMoved = default
-    tool = nvimdiff
 [init]
-    defaultBranch = main
-[pull]
-    ff = only
-    rebase = true
+	defaultBranch = main
 [push]
-    autoSetupRemote = true
+	autoSetupRemote = true
+[pull]
+	ff = only
+	rebase = true
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[core]
+	pager = delta
+	excludesFile = ~/.gitignore
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true  # use n and N to move between diff sections
+	light = false
+	side-by-side = true
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
+	tool = nvimdiff
+[alias]
+	last = log -1 HEAD
