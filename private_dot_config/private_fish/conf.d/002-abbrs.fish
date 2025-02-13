@@ -1,5 +1,6 @@
 abbr --add -- zbr 'zig build run'
 abbr --add -- zb 'zig build'
+abbr -a -- fsrc 'cd (fd -td -H \'\.git$\' ~/ghq --prune -0 | xargs -0 dirname | fzf)'
 
 abbr --add -- hfc 'huggingface-cli download --local-dir ~/.local/llama.cpp/models/'
 
@@ -89,3 +90,4 @@ function le
 end
 
 abbr --add le --function le --set-cursor --position anywhere
+abbr -a -- gmt 'go mod tidy'
