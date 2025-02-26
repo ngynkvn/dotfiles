@@ -7,7 +7,7 @@ type -q pnpm; and set -x PNPM_HOME "$HOME/.local/share/pnpm"; and fish_add_path 
 set -x BUN_INSTALL "$HOME/.bun"
 fish_add_path "$BUN_INSTALL/bin"
 
-test -e "$HOME/.local/share/cargo/env.fish"; and source "$HOME/.local/share/cargo/env.fish"
+test -e "$HOME/.cargo/env.fish"; and source "$HOME/.cargo/env.fish"
 
 set --export ZVM_INSTALL "$HOME/.zvm/self"
 fish_add_path "$HOME/.zvm/bin"
@@ -17,7 +17,6 @@ EMSDK_QUIET=1 type -q ~/dev/source/emsdk/emsdk_env.fish; and source ~/dev/source
 
 set fish_greeting
 if status is-interactive
-    fish_hybrid_key_bindings
     if command -v zoxide &>/dev/null
         zoxide init fish --cmd cd | source
     end
