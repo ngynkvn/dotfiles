@@ -15,9 +15,9 @@
 
 # for example, if you're in vim + ghostty...
 #font-family = Iosevka Term
-font-family = Iosevka Term
+font-family = Lilex
 # change this ^^
-font-size = 16
+font-size = 15
 font-feature = ss04
 
 # Save, then refresh config with a keybind
@@ -33,8 +33,8 @@ font-feature = ss04
 #font-style = Medium
 
 #> Theme
-theme = rose-pine
-background = #111019
+theme = tokyonight_night
+background = #111119
 #foreground = #cdd6f4
 minimum-contrast = 1
 selection-invert-fg-bg = true
@@ -147,6 +147,6 @@ bold-is-bright = false
 window-decoration = true
 window-save-state = always
 macos-window-shadow = false
-background-opacity = 0.975
-background-blur-radius = 18
+background-opacity = 0.95
+#background-blur-radius = 2
 #custom-shader = /Users/ngynkvn/.config/ghostty/seascape.glsl

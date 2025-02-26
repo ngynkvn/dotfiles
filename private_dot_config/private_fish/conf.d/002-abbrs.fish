@@ -1,6 +1,7 @@
 abbr --add -- zbr 'zig build run'
-abbr --add -- zb 'zig build'
+abbr -a -- zb 'zig build'
 abbr -a -- fsrc 'cd (fd -td -H \'\.git$\' ~/ghq --prune -0 | xargs -0 dirname | fzf)'
+abbr -a -- cr 'cargo run'
 
 abbr --add -- hfc 'huggingface-cli download --local-dir ~/.local/llama.cpp/models/'
 
