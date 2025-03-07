@@ -38,11 +38,14 @@ background = #111119
 #foreground = #cdd6f4
 minimum-contrast = 1
 selection-invert-fg-bg = true
+adjust-cursor-thickness = 5
 
 #> System
 command = /opt/homebrew/bin/fish
 macos-option-as-alt = true
 click-repeat-interval = 500
+shell-integration-features = sudo,no-cursor
+cursor-style = bar
 
 #> Keybinds
 keybind = super+shift+h=goto_split:left
