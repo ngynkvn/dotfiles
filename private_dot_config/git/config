@@ -1,0 +1,37 @@
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[pull]
+	ff = only
+  rebase = true
+[core]
+    pager = delta
+    excludesFile = ignore
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[diff]
+  external = difft
+	colorMoved = default
+	tool = nvimdiff
+[interactive]
+    diffFilter = difft
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    side-by-side=true
+[merge]
+    conflictstyle = diff3
+[user]
+	email = ngynkvn@gmail.com
+	name = Kevin
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[maintenance]
+	repo = /Users/ngynkvn/dev/rs/rogue_lite_arpg
+[alias]
+	last = log -1 HEAD
