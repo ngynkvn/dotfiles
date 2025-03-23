@@ -15,7 +15,8 @@
 
 # for example, if you're in vim + ghostty...
 #font-family = Iosevka Term
-font-family = Lilex
+#font-family = Lilex
+font-family = IBM Plex Mono
 # change this ^^
 font-size = 18
 font-feature = ss04
