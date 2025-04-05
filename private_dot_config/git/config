@@ -7,7 +7,7 @@
   rebase = true
 [core]
     pager = delta
-    excludesFile = ignore
+    excludesFile = ~/.config/git/ignore
 [branch]
 	sort = -committerdate
 [column]
@@ -35,3 +35,5 @@
 	repo = /Users/ngynkvn/dev/rs/rogue_lite_arpg
 [alias]
 	last = log -1 HEAD
+	s = status
+	cm = commit
