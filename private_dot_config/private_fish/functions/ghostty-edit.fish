@@ -8,5 +8,5 @@ function ghostty-edit
         echo "multiple matches, bailing"
         return 1
     end
-    gsed -e "0,/^$K.*/s//$K = $V/" -i $ghostty_config
+    gsed -e "0,/^$K.*/s//$K = $V/" -i $ghostty_config && echo "$K = $V"
 end
