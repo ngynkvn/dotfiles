@@ -1,3 +1,19 @@
 [user]
 name = "Kevin Nguyen"
 email = "ngynkvn@gmail.com"
+
+[ui]
+diff-editor = ":builtin"
+default-command = "st"
+
+[diff]
+tool = ["difft", "--color=always", "$left", "$right"]
+
+[fix.tools.rustfmt]
+enabled = false
+command = ["rustfmt", "--emit", "stdout"]
+patterns = ["glob:'**/*.rs'"]
+
+[git]
+fetch = ["upstream", "origin"]
+push = "origin"
