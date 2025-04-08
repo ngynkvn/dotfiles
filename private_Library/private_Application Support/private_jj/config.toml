@@ -1,4 +1,7 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+colors.change_id = { fg = "green", bold = true }
+
 [user]
 name = "Kevin Nguyen"
 email = "ngynkvn@gmail.com"
@@ -6,15 +9,8 @@ email = "ngynkvn@gmail.com"
 [ui]
 diff-editor = ":builtin"
 default-command = "st"
+
 [diff]
-[aliases]
-ll = ["log", "--no-pager", "-n10"]
-ls = ["log", "--no-pager", "-n10"]
-d = ["diff"]
-g = ["git"]
-h = ["help"]
-gp = ["git", "push"]
-l = ["log", "--no-pager", "-n10"]
 tool = ["difft", "--color=always", "$left", "$right"]
 
 [fix.tools.rustfmt]
@@ -25,11 +21,45 @@ patterns = ["glob:'**/*.rs'"]
 [git]
 fetch = ["upstream", "origin"]
 push = "origin"
-[ui]
-default-command = "st"
-# Possible values: "color-words" (default), "git", "summary"
-diff.format = "git"
+
+[aliases]
+l = ["log", "--no-pager", "-n5"]
+ll = ["log", "--no-pager", "-n10"]
+lll = ["log", "--no-pager", "-n15"]
+g = ["git"]
+gp = ["git", "push"]
+push = ["git", "push"]
+d = ["diff"]
+h = ["help"]
+
+[templates]
+# Use builtin log template
+log = "log_wide_compact"
+# Use builtin op log template
+op_log = "builtin_op_log_compact"
+# Use builtin show template
+show = "builtin_log_detailed"
+config_list = "builtin_config_list_detailed"
+
 
 [template-aliases]
-# Highlight unique prefix and show at least 12 characters (default)
-'format_short_id(id)' = 'id.shortest(6)'
+"format_short_id(id)" = "id.shortest(6)"
+
+
+log_wide_compact = '''
+if(root,
+  format_root_commit(self),
+  label(if(current_working_copy, "working_copy"),
+    concat(
+      format_short_commit_header(self) ++ "\n",
+      separate(" ",
+        if(empty, label("empty", "(empty)")),
+        if(description,
+          description.first_line(),
+          label(if(empty, "empty"), description_placeholder),
+        ),
+      ) ++ "\n",
+    ),
+  )
+)
+'''
