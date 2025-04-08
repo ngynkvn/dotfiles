@@ -1,3 +1,4 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 [user]
 name = "Kevin Nguyen"
 email = "ngynkvn@gmail.com"
@@ -5,8 +6,15 @@ email = "ngynkvn@gmail.com"
 [ui]
 diff-editor = ":builtin"
 default-command = "st"
-
 [diff]
+[aliases]
+ll = ["log", "--no-pager", "-n10"]
+ls = ["log", "--no-pager", "-n10"]
+d = ["diff"]
+g = ["git"]
+h = ["help"]
+gp = ["git", "push"]
+l = ["log", "--no-pager", "-n10"]
 tool = ["difft", "--color=always", "$left", "$right"]
 
 [fix.tools.rustfmt]
@@ -17,3 +25,11 @@ patterns = ["glob:'**/*.rs'"]
 [git]
 fetch = ["upstream", "origin"]
 push = "origin"
+[ui]
+default-command = "st"
+# Possible values: "color-words" (default), "git", "summary"
+diff.format = "git"
+
+[template-aliases]
+# Highlight unique prefix and show at least 12 characters (default)
+'format_short_id(id)' = 'id.shortest(6)'
