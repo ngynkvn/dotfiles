@@ -2,6 +2,24 @@
 
 My dotfiles!
 
+## Important commands
+
+[navi](https://github.com/denisidoro/navi)
+[jj](https://github.com/jj-vcs/jj)
+[ripgrep](https://github.com/BurntSushi/ripgrep)
+[fd](https://github.com/sharkdp/fd)
+[zig](https://ziglang.org/)
+[pastel](https://github.com/sharkdp/pastel)
+[uv](https://docs.astral.sh/uv/)
+[git-extras](https://github.com/tj/git-extras)
+[fish](https://fishshell.com)
+[dust](https://github.com/bootandy/dust)
+[tldr](https://tldr.sh/)
+[just](https://github.com/casey/just)
+[bat](https://github.com/sharkdp/bat)
+[chezmoi](https://chezmoi.io/)
+[neovim](https://neovim.io/)
+
 ## Test
 
 ```bash

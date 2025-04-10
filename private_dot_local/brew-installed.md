@@ -1,0 +1,291 @@
+<!-- brew info --json --installed | jq '.[] | "- [\(.full_name)](\(.homepage)): \(.desc)"' -cr > ~/.local/brew-installed.md -->
+
+- [age](https://github.com/FiloSottile/age): Simple, modern, secure file encryption
+- [angle-grinder](https://github.com/rcoh/angle-grinder): Slice and dice log files on the command-line
+- [aom](https://aomedia.googlesource.com/aom): Codec library for encoding and decoding AV1 video streams
+- [aribb24](https://code.videolan.org/jeeb/aribb24): Library for ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS
+- [ast-grep](https://github.com/ast-grep/ast-grep): Code searching, linting, rewriting
+- [autoconf](https://www.gnu.org/software/autoconf/): Automatic configure script builder
+- [autoconf-archive](https://savannah.gnu.org/projects/autoconf-archive/): Collection of over 500 reusable autoconf macros
+- [automake](https://www.gnu.org/software/automake/): Tool for generating GNU Standards-compliant Makefiles
+- [bacon](https://dystroy.org/bacon/): Background rust code check
+- [bash](https://www.gnu.org/software/bash/): Bourne-Again SHell, a UNIX command interpreter
+- [bash-completion@2](https://github.com/scop/bash-completion): Programmable completion for Bash 4.2+
+- [bat](https://github.com/sharkdp/bat): Clone of cat(1) with syntax highlighting and Git integration
+- [bat-extras](https://github.com/eth-p/bat-extras): Bash scripts that integrate bat with various command-line tools
+- [bdw-gc](https://www.hboehm.info/gc/): Garbage collector for C and C++
+- [berkeley-db@5](https://www.oracle.com/database/technologies/related/berkeleydb.html): High performance key/value database
+- [blake3](https://github.com/BLAKE3-team/BLAKE3): C implementation of the BLAKE3 cryptographic hash function
+- [brotli](https://github.com/google/brotli): Generic-purpose lossless compression algorithm by Google
+- [btop](https://github.com/aristocratos/btop): Resource monitor. C++ version and continuation of bashtop and bpytop
+- [buf](https://github.com/bufbuild/buf): New way of working with Protocol Buffers
+- [c-ares](https://c-ares.org/): Asynchronous DNS library
+- [ca-certificates](https://curl.se/docs/caextract.html): Mozilla CA certificate store
+- [cairo](https://cairographics.org/): Vector graphics library with cross-device output support
+- [capstone](https://www.capstone-engine.org/): Multi-platform, multi-architecture disassembly framework
+- [cbonsai](https://gitlab.com/jallbrit/cbonsai): Console Bonsai is a bonsai tree generator, written in C using ncurses
+- [ccache](https://ccache.dev/): Object-file caching compiler wrapper
+- [certifi](https://github.com/certifi/python-certifi): Mozilla CA bundle for Python
+- [cffi](https://cffi.readthedocs.io/en/latest/): C Foreign Function Interface for Python
+- [chezmoi](https://chezmoi.io/): Manage your dotfiles across multiple diverse machines, securely
+- [cjson](https://github.com/DaveGamble/cJSON): Ultralightweight JSON parser in ANSI C
+- [cmake](https://www.cmake.org/): Cross-platform make
+- [code-server](https://github.com/coder/code-server): Access VS Code through the browser
+- [codecrafters-io/tap/codecrafters](https://codecrafters.io): CodeCrafters CLI
+- [compiledb](https://github.com/nickdiego/compiledb): Generate a Clang compilation database for Make-based build systems
+- [crates-tui](https://github.com/ratatui/crates-tui): TUI for exploring crates.io using Ratatui
+- [cryptography](https://cryptography.io/en/latest/): Cryptographic recipes and primitives for Python
+- [curl](https://curl.se): Get a file from an HTTP, HTTPS or FTP server
+- [dart-lang/dart/dart](https://dart.dev): SDK
+- [dav1d](https://code.videolan.org/videolan/dav1d): AV1 decoder targeted to be small and fast
+- [deno](https://deno.com/): Secure runtime for JavaScript and TypeScript
+- [difftastic](https://github.com/Wilfred/difftastic): Diff that understands syntax
+- [direnv](https://direnv.net/): Load/unload environment variables based on $PWD
+- [diskonaut](https://github.com/imsnif/diskonaut): Terminal visual disk space navigator
+- [dive](https://github.com/wagoodman/dive): Tool for exploring each layer in a docker image
+- [dua-cli](https://lib.rs/crates/dua-cli): View disk space usage and delete unwanted data, fast
+- [duckdb](https://www.duckdb.org): Embeddable SQL OLAP Database Management System
+- [duf](https://github.com/muesli/duf): Disk Usage/Free Utility - a better 'df' alternative
+- [dust](https://github.com/bootandy/dust): More intuitive version of du in rust
+- [erlang](https://www.erlang.org/): Programming language for highly scalable real-time systems
+- [exiftool](https://exiftool.org): Perl lib for reading and writing EXIF metadata
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch): Like neofetch, but much faster because written mostly in C
+- [fd](https://github.com/sharkdp/fd): Simple, fast and user-friendly alternative to find
+- [ffmpeg](https://ffmpeg.org/): Play, record, convert, and stream audio and video
+- [fish](https://fishshell.com): User-friendly command-line shell for UNIX-like operating systems
+- [flac](https://xiph.org/flac/): Free lossless audio codec
+- [flyctl](https://fly.io): Command-line tools for fly.io services
+- [fmt](https://fmt.dev/): Open-source formatting library for C++
+- [font-util](https://www.x.org/): X.Org: Font package creation/installation utilities
+- [fontconfig](https://wiki.freedesktop.org/www/Software/fontconfig/): XML-based font configuration API for X Windows
+- [freetype](https://www.freetype.org/): Software library to render fonts
+- [charmbracelet/tap/freeze](https://charm.sh/): Generate images of code and terminal output.
+- [frei0r](https://frei0r.dyne.org/): Minimalistic plugin API for video effects
+- [fribidi](https://github.com/fribidi/fribidi): Implementation of the Unicode BiDi algorithm
+- [fzf](https://github.com/junegunn/fzf): Command-line fuzzy finder written in Go
+- [gawk](https://www.gnu.org/software/gawk/): GNU awk utility
+- [gcc](https://gcc.gnu.org/): GNU compiler collection
+- [gd](https://libgd.github.io/): Graphics library to dynamically manipulate images
+- [gdk-pixbuf](https://gtk.org): Toolkit for image loading and pixel buffer manipulation
+- [gettext](https://www.gnu.org/software/gettext/): GNU internationalization (i18n) and localization (l10n) library
+- [gfold](https://github.com/nickgerace/gfold): Help keep track of your Git repositories, written in Rust
+- [gh](https://cli.github.com/): GitHub command-line tool
+- [ghostscript](https://www.ghostscript.com/): Interpreter for PostScript and PDF
+- [ghq](https://github.com/x-motemen/ghq): Remote repository management made easy
+- [simonwhitaker/tap/gibo](https://github.com/simonwhitaker/gibo):
+- [giflib](https://giflib.sourceforge.net/): Library and utilities for processing GIFs
+- [git](https://git-scm.com): Distributed revision control system
+- [git-delta](https://github.com/dandavison/delta): Syntax-highlighting pager for git and diff output
+- [git-extras](https://github.com/tj/git-extras): Small git utilities
+- [git-filter-repo](https://github.com/newren/git-filter-repo): Quickly rewrite git repository history
+- [git-lfs](https://git-lfs.com/): Git extension for versioning large files
+- [gitleaks](https://gitleaks.io/): Audit git repos for secrets
+- [gleam](https://gleam.run): Statically typed language for the Erlang VM
+- [glfw](https://www.glfw.org/): Multi-platform library for OpenGL applications
+- [glib](https://docs.gtk.org/glib/): Core application library for C
+- [glow](https://github.com/charmbracelet/glow): Render markdown on the CLI
+- [gmp](https://gmplib.org/): GNU multiple precision arithmetic library
+- [gnu-sed](https://www.gnu.org/software/sed/): GNU implementation of the famous stream editor
+- [gnutls](https://gnutls.org/): GNU Transport Layer Security (TLS) Library
+- [go](https://go.dev/): Open source programming language to build simple/reliable/efficient software
+- [go-task/tap/go-task](https://taskfile.dev): Task runner / simpler Make alternative written in Go
+- [graphite2](https://graphite.sil.org/): Smart font renderer for non-Roman scripts
+- [graphviz](https://graphviz.org/): Graph visualization software from AT&T and Bell Labs
+- [graphviz2drawio](https://github.com/hbmartin/graphviz2drawio/): Convert graphviz (dot) files into draw.io / lucid (mxGraph) format
+- [grep](https://www.gnu.org/software/grep/): GNU grep, egrep and fgrep
+- [gts](https://gts.sourceforge.net/): GNU triangulated surface library
+- [gum](https://github.com/charmbracelet/gum): Tool for glamorous shell scripts
+- [harfbuzz](https://github.com/harfbuzz/harfbuzz): OpenType text shaping engine
+- [hexyl](https://github.com/sharkdp/hexyl): Command-line hex viewer
+- [highway](https://github.com/google/highway): Performance-portable, length-agnostic SIMD with runtime dispatch
+- [hiredis](https://github.com/redis/hiredis): Minimalistic client for Redis
+- [howdoi](https://github.com/gleitz/howdoi): Instant coding answers via the command-line
+- [hugo](https://gohugo.io/): Configurable static site generator
+- [hyperfine](https://github.com/sharkdp/hyperfine): Command-line benchmarking tool
+- [icu4c@76](https://icu.unicode.org/home): C/C++ and Java libraries for Unicode and globalization
+- [icu4c@77](https://icu.unicode.org/home): C/C++ and Java libraries for Unicode and globalization
+- [imagemagick](https://imagemagick.org/index.php): Tools and libraries to manipulate images in many formats
+- [imath](https://imath.readthedocs.io/en/latest/): Library of 2D and 3D vector, matrix, and math operations
+- [blacktop/tap/ipsw](https://github.com/blacktop/ipsw): iOS/macOS Research Swiss Army Knife
+- [isl](https://libisl.sourceforge.io/): Integer Set Library for the polyhedral model
+- [jasper](https://ece.engr.uvic.ca/~frodo/jasper/): Library for manipulating JPEG-2000 images
+- [jbig2dec](https://github.com/ArtifexSoftware/jbig2dec): JBIG2 decoder and library (for monochrome documents)
+- [jj](https://github.com/jj-vcs/jj): Git-compatible distributed version control system
+- [jless](https://jless.io/): Command-line pager for JSON data
+- [jnv](https://github.com/ynqa/jnv): Interactive JSON filter using jq
+- [jpeg-turbo](https://www.libjpeg-turbo.org/): JPEG image codec that aids compression and decompression
+- [jpeg-xl](https://jpeg.org/jpegxl/index.html): New file format for still image compression
+- [jq](https://jqlang.github.io/jq/): Lightweight and flexible command-line JSON processor
+- [just](https://github.com/casey/just): Handy way to save and run project-specific commands
+- [mike-engel/jwt-cli/jwt-cli](https://github.com/mike-engel/jwt-cli): Super fast CLI tool to decode and encode JWTs built in Rust
+- [lame](https://lame.sourceforge.io/): High quality MPEG Audio Layer III (MP3) encoder
+- [lazygit](https://github.com/jesseduffield/lazygit/): Simple terminal UI for git commands
+- [leptonica](http://www.leptonica.org/): Image processing and image analysis library
+- [libarchive](https://www.libarchive.org): Multi-format archive and compression library
+- [libass](https://github.com/libass/libass): Subtitle renderer for the ASS/SSA subtitle format
+- [libavif](https://github.com/AOMediaCodec/libavif): Library for encoding and decoding .avif files
+- [libb2](https://blake2.net/): Secure hashing function
+- [libbluray](https://www.videolan.org/developers/libbluray.html): Blu-Ray disc playback library for media players like VLC
+- [libde265](https://github.com/strukturag/libde265): Open h.265 video codec implementation
+- [libdeflate](https://github.com/ebiggers/libdeflate): Heavily optimized DEFLATE/zlib/gzip compression and decompression
+- [libevent](https://libevent.org/): Asynchronous event library
+- [libgit2](https://libgit2.github.com/): C library of Git core methods that is re-entrant and linkable
+- [libheif](https://www.libde265.org/): ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+- [libidn](https://www.gnu.org/software/libidn/): International domain name library
+- [libidn2](https://www.gnu.org/software/libidn/#libidn2): International domain name library (IDNA2008, Punycode and TR46)
+- [liblinear](https://www.csie.ntu.edu.tw/~cjlin/liblinear/): Library for large linear classification
+- [liblqr](https://liblqr.wikidot.com/): C/C++ seam carving library
+- [libmicrohttpd](https://www.gnu.org/software/libmicrohttpd/): Light HTTP/1.1 server library
+- [libmpc](https://www.multiprecision.org/): C library for the arithmetic of high precision complex numbers
+- [libnghttp2](https://nghttp2.org/): HTTP/2 C Library
+- [libogg](https://www.xiph.org/ogg/): Ogg Bitstream Library
+- [libomp](https://openmp.llvm.org/): LLVM's OpenMP runtime library
+- [libpng](http://www.libpng.org/pub/png/libpng.html): Library for manipulating PNG images
+- [libraw](https://www.libraw.org/): Library for reading RAW files from digital photo cameras
+- [librist](https://code.videolan.org/rist/): Reliable Internet Stream Transport (RIST)
+- [librsvg](https://wiki.gnome.org/Projects/LibRsvg): Library to render SVG files using Cairo
+- [libsamplerate](https://github.com/libsndfile/libsamplerate): Library for sample rate conversion of audio data
+- [libsndfile](https://libsndfile.github.io/libsndfile/): C library for files containing sampled sound
+- [libsodium](https://libsodium.org/): NaCl networking and cryptography library
+- [libsoxr](https://sourceforge.net/projects/soxr/): High quality, one-dimensional sample-rate conversion library
+- [libssh](https://www.libssh.org/): C library SSHv1/SSHv2 client and server protocols
+- [libssh2](https://libssh2.org/): C library implementing the SSH2 protocol
+- [libtasn1](https://www.gnu.org/software/libtasn1/): ASN.1 structure parser library
+- [libtiff](https://libtiff.gitlab.io/libtiff/): TIFF library and utilities
+- [libtool](https://www.gnu.org/software/libtool/): Generic library support script
+- [libunibreak](https://github.com/adah1972/libunibreak): Implementation of the Unicode line- and word-breaking algorithms
+- [libunistring](https://www.gnu.org/software/libunistring/): C string library for manipulating Unicode strings
+- [libuv](https://libuv.org): Multi-platform support library with a focus on asynchronous I/O
+- [libvidstab](http://public.hronopik.de/vid.stab/): Transcode video stabilization plugin
+- [libvmaf](https://github.com/Netflix/vmaf): Perceptual video quality assessment based on multi-method fusion
+- [libvorbis](https://xiph.org/vorbis/): Vorbis general audio compression codec
+- [libvpx](https://www.webmproject.org/code/): VP8/VP9 video codec
+- [libvterm](https://www.leonerd.org.uk/code/libvterm/): C99 library which implements a VT220 or xterm terminal emulator
+- [libx11](https://www.x.org/): X.Org: Core X11 protocol client library
+- [libxau](https://www.x.org/): X.Org: A Sample Authorization Protocol for X
+- [libxcb](https://www.x.org/): X.Org: Interface to the X Window System protocol
+- [libxdmcp](https://www.x.org/): X.Org: X Display Manager Control Protocol library
+- [libxext](https://www.x.org/): X.Org: Library for common extensions to the X11 protocol
+- [libxrender](https://www.x.org/): X.Org: Library for the Render Extension to the X11 protocol
+- [libyaml](https://github.com/yaml/libyaml): YAML Parser
+- [libzip](https://libzip.org/): C library for reading, creating, and modifying zip archives
+- [lighttpd](https://www.lighttpd.net/): Small memory footprint, flexible web-server
+- [little-cms2](https://www.littlecms.com/): Color management engine supporting ICC profiles
+- [llvm](https://llvm.org/): Next-gen compiler infrastructure
+- [lnav](https://lnav.org/): Curses-based tool for viewing and analyzing log files
+- [lpeg](https://www.inf.puc-rio.br/~roberto/lpeg/): Parsing Expression Grammars For Lua
+- [lsd](https://github.com/lsd-rs/lsd): Clone of ls with colorful output, file type icons, and more
+- [lua](https://www.lua.org/): Powerful, lightweight programming language
+- [luajit](https://luajit.org/luajit.html): Just-In-Time Compiler (JIT) for the Lua programming language
+- [luarocks](https://luarocks.org/): Package manager for the Lua programming language
+- [luv](https://github.com/luvit/luv): Bare libuv bindings for lua
+- [lz4](https://lz4.github.io/lz4/): Extremely Fast Compression algorithm
+- [lzo](https://www.oberhumer.com/opensource/lzo/): Real-time data compression library
+- [m4](https://www.gnu.org/software/m4/): Macro processing language
+- [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli): CLI for Node.js style checker and lint tool for Markdown files
+- [mbedtls](https://tls.mbed.org/): Cryptographic & SSL/TLS library
+- [md4c](https://github.com/mity/md4c): C Markdown parser. Fast. SAX-like interface
+- [mpdecimal](https://www.bytereef.org/mpdecimal/): Library for decimal floating point arithmetic
+- [mpfr](https://www.mpfr.org/): C library for multiple-precision floating-point computations
+- [mpg123](https://www.mpg123.de/): MP3 player for Linux and UNIX
+- [mr](https://myrepos.branchable.com/): Multiple Repository management tool
+- [msgpack](https://msgpack.org/): Library for a binary-based efficient data interchange format
+- [nasm](https://www.nasm.us/): Netwide Assembler (NASM) is an 80x86 assembler
+- [navi](https://github.com/denisidoro/navi): Interactive cheatsheet tool for the command-line
+- [xwmx/taps/nb](https://github.com/xwmx/nb): null
+- [ncdu](https://dev.yorhel.nl/ncdu): NCurses Disk Usage
+- [ncurses](https://invisible-island.net/ncurses/announce.html): Text-based UI library
+- [neofetch](https://github.com/dylanaraps/neofetch): Fast, highly customisable system info script
+- [neovide](https://neovide.dev/): No Nonsense Neovim Client in Rust
+- [neovim](https://neovim.io/): Ambitious Vim-fork focused on extensibility and agility
+- [netpbm](https://netpbm.sourceforge.net/): Image manipulation
+- [nettle](https://www.lysator.liu.se/~nisse/nettle/): Low-level cryptographic library
+- [ninja](https://ninja-build.org/): Small build system for use with gyp or CMake
+- [nmap](https://nmap.org/): Port scanning utility for large networks
+- [node](https://nodejs.org/): Platform built on V8 to build network applications
+- [node@20](https://nodejs.org/): Platform built on V8 to build network applications
+- [numpy](https://www.numpy.org/): Package for scientific computing with Python
+- [nushell](https://www.nushell.sh): Modern shell for the GitHub era
+- [oniguruma](https://github.com/kkos/oniguruma/): Regular expressions library
+- [openblas](https://www.openblas.net/): Optimized BLAS library
+- [opencore-amr](https://opencore-amr.sourceforge.net/): Audio codecs extracted from Android open source project
+- [openexr](https://www.openexr.com/): High dynamic-range image file format
+- [openjdk@21](https://openjdk.java.net/): Development kit for the Java programming language
+- [openjpeg](https://www.openjpeg.org/): Library for JPEG-2000 image manipulation
+- [openldap](https://www.openldap.org/software/): Open source suite of directory software
+- [openssl@3](https://openssl-library.org): Cryptography and SSL/TLS Toolkit
+- [opus](https://www.opus-codec.org/): Audio codec
+- [p11-kit](https://p11-glue.freedesktop.org): Library to load and enumerate PKCS#11 modules
+- [pandoc](https://pandoc.org/): Swiss-army knife of markup format conversion
+- [pango](https://www.gtk.org/docs/architecture/pango): Framework for layout and rendering of i18n text
+- [par](http://www.nicemice.net/par/): Paragraph reflow for email
+- [pastel](https://github.com/sharkdp/pastel): Command-line tool to generate, analyze, convert and manipulate colors
+- [pcre2](https://www.pcre.org/): Perl compatible regular expressions library with a new API
+- [pixman](https://cairographics.org/): Low-level library for pixel manipulation
+- [pkgconf](https://github.com/pkgconf/pkgconf): Package compiler and linker metadata toolkit
+- [pnpm](https://pnpm.io/): Fast, disk space efficient package manager
+- [podman](https://podman.io/): Tool for managing OCI containers and pods
+- [procs](https://github.com/dalance/procs): Modern replacement for ps written in Rust
+- [pycparser](https://github.com/eliben/pycparser): C parser in Python
+- [pygments](https://pygments.org/): Generic syntax highlighter
+- [python-packaging](https://packaging.pypa.io/): Core utilities for Python packages
+- [python@3.12](https://www.python.org/): Interpreted, interactive, object-oriented programming language
+- [python@3.13](https://www.python.org/): Interpreted, interactive, object-oriented programming language
+- [qt@5](https://www.qt.io/): Cross-platform application and UI framework
+- [radare2](https://radare.org): Reverse engineering framework
+- [rav1e](https://github.com/xiph/rav1e): Fastest and safest AV1 video encoder
+- [readline](https://tiswww.case.edu/php/chet/readline/rltop.html): Library for command-line editing
+- [rebar3](https://rebar3.org): Erlang build tool
+- [restic](https://restic.net/): Fast, efficient and secure backup program
+- [ripgrep](https://github.com/BurntSushi/ripgrep): Search tool like grep and The Silver Searcher
+- [rtmpdump](https://rtmpdump.mplayerhq.hu/): Tool for downloading RTMP streaming media
+- [rubberband](https://breakfastquay.com/rubberband/): Audio time stretcher tool and library
+- [sass/sass/sass](https://sass-lang.com): Stylesheet Preprocessor
+- [screenresolution](https://github.com/jhford/screenresolution): Get, set, and list display resolution
+- [sdl2](https://www.libsdl.org/): Low-level access to audio, keyboard, mouse, joystick, and graphics
+- [shared-mime-info](https://wiki.freedesktop.org/www/Software/shared-mime-info): Database of common MIME types
+- [sherlock](https://sherlockproject.xyz/): Hunt down social media accounts by username
+- [charmbracelet/tap/skate](https://charm.sh/): A personal key value store 🛼
+- [snappy](https://google.github.io/snappy/): Compression/decompression library aiming for high speed
+- [speex](https://speex.org/): Audio codec designed for speech
+- [sqlite](https://sqlite.org/index.html): Command-line interface for SQLite
+- [srt](https://www.srtalliance.org/): Secure Reliable Transport
+- [svt-av1](https://gitlab.com/AOMediaCodec/SVT-AV1): AV1 encoder
+- [swi-prolog](https://www.swi-prolog.org/): ISO/Edinburgh-style Prolog interpreter
+- [swig](https://www.swig.org/): Generate scripting interfaces to C/C++ code
+- [syncthing](https://syncthing.net/): Open source continuous file synchronization application
+- [t-rec](https://github.com/sassman/t-rec-rs): Blazingly fast terminal recorder that generates animated gif images for the web
+- [taplo](https://taplo.tamasfe.dev): TOML toolkit written in Rust
+- [tesseract](https://tesseract-ocr.github.io/): OCR (Optical Character Recognition) engine
+- [theora](https://www.theora.org/): Open video compression format
+- [tig](https://jonas.github.io/tig/): Text interface for Git repositories
+- [tldr](https://tldr.sh/): Simplified and community-driven man pages
+- [tokei](https://github.com/XAMPPRocky/tokei): Program that allows you to count code, quickly
+- [tracy](https://github.com/wolfpld/tracy): Real-time, nanosecond resolution frame profiler
+- [tree-sitter](https://tree-sitter.github.io/): Parser generator tool and incremental parsing library
+- [unbound](https://www.unbound.net): Validating, recursive, caching DNS resolver
+- [unibilium](https://github.com/neovim/unibilium): Very basic terminfo library
+- [unixodbc](https://www.unixodbc.org/): ODBC 3 connectivity for UNIX
+- [utf8proc](https://juliastrings.github.io/utf8proc/): Clean C library for processing UTF-8 Unicode data
+- [uv](https://docs.astral.sh/uv/): Extremely fast Python package installer and resolver, written in Rust
+- [w3m](https://w3m.sourceforge.net/): Pager/text based browser
+- [webp](https://developers.google.com/speed/webp/): Image format providing lossless and lossy compression for web images
+- [wget](https://www.gnu.org/software/wget/): Internet file retriever
+- [ikebastuz/wiper/wiper](https://github.com/ikebastuz/wiper): Cross-platform space inspector
+- [wxwidgets](https://www.wxwidgets.org): Cross-platform C++ GUI toolkit
+- [x264](https://www.videolan.org/developers/x264.html): H.264/AVC encoder
+- [x265](https://bitbucket.org/multicoreware/x265_git): H.265/HEVC encoder
+- [xdg-ninja](https://github.com/b3nj5m1n/xdg-ninja): Check your $HOME for unwanted files and directories
+- [xorgproto](https://www.x.org/): X.Org: Protocol Headers
+- [xq](https://github.com/sibprogrammer/xq): Command-line XML and HTML beautifier and content extractor
+- [xsv](https://github.com/BurntSushi/xsv): Fast CSV toolkit written in Rust
+- [xvid](https://labs.xvid.com/): High-performance, high-quality MPEG-4 video library
+- [xxhash](https://xxhash.com): Extremely fast non-cryptographic hash algorithm
+- [xz](https://tukaani.org/xz/): General-purpose data compression with high compression ratio
+- [yazi](https://github.com/sxyazi/yazi): Blazing fast terminal file manager written in Rust, based on async I/O
+- [youplot](https://github.com/red-data-tools/YouPlot/): Command-line tool that draw plots on the terminal
+- [z3](https://github.com/Z3Prover/z3): High-performance theorem prover
+- [zeromq](https://zeromq.org/): High-performance, asynchronous messaging library
+- [zimg](https://github.com/sekrit-twc/zimg): Scaling, colorspace conversion, and dithering library
+- [zoxide](https://github.com/ajeetdsouza/zoxide): Shell extension to navigate your filesystem faster
+- [zstd](https://facebook.github.io/zstd/): Zstandard is a real-time compression algorithm
