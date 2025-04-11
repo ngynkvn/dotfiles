@@ -1,0 +1,52 @@
+# Tools
+
+- [age](https://github.com/FiloSottile/age): Simple, modern, secure file encryption
+- [angle-grinder](https://github.com/rcoh/angle-grinder): Slice and dice log files on the command-line
+- [bacon](https://dystroy.org/bacon/): Background rust code check
+- [bat](https://github.com/sharkdp/bat): Clone of cat(1) with syntax highlighting and Git integration
+- [bat-extras](https://github.com/eth-p/bat-extras): Bash scripts that integrate bat with various command-line tools
+- [btop](https://github.com/aristocratos/btop): Resource monitor. C++ version and continuation of bashtop and bpytop
+- [age](https://github.com/FiloSottile/age): Simple, modern, secure file encryption
+- [angle-grinder](https://github.com/rcoh/angle-grinder): Slice and dice log files on the command-line
+- [chezmoi](https://chezmoi.io/): Manage your dotfiles across multiple diverse machines, securely
+- [curl](https://curl.se): Get a file from an HTTP, HTTPS or FTP server
+- [difftastic](https://github.com/Wilfred/difftastic): Diff that understands syntax
+- [direnv](https://direnv.net/): Load/unload environment variables based on $PWD
+- [fd](https://github.com/sharkdp/fd): Simple, fast and user-friendly alternative to find
+- [fish](https://fishshell.com): User-friendly command-line shell for UNIX-like operating systems
+- [charmbracelet/tap/freeze](https://charm.sh/): Generate images of code and terminal output.
+- [fzf](https://github.com/junegunn/fzf): Command-line fuzzy finder written in Go
+- [gawk](https://www.gnu.org/software/gawk/): GNU awk utility
+- [ghq](https://github.com/x-motemen/ghq): Remote repository management made easy
+- [simonwhitaker/tap/gibo](https://github.com/simonwhitaker/gibo):
+- [git-delta](https://github.com/dandavison/delta): Syntax-highlighting pager for git and diff output
+- [git-extras](https://github.com/tj/git-extras): Small git utilities
+- [git-filter-repo](https://github.com/newren/git-filter-repo): Quickly rewrite git repository history
+- [git-lfs](https://git-lfs.com/): Git extension for versioning large files
+- [gitleaks](https://gitleaks.io/): Audit git repos for secrets
+- [glow](https://github.com/charmbracelet/glow): Render markdown on the CLI
+- [gnu-sed](https://www.gnu.org/software/sed/): GNU implementation of the famous stream editor
+- [grep](https://www.gnu.org/software/grep/): GNU grep, egrep and fgrep
+- [gum](https://github.com/charmbracelet/gum): Tool for glamorous shell scripts
+- [hexyl](https://github.com/sharkdp/hexyl): Command-line hex viewer
+- [hugo](https://gohugo.io/): Configurable static site generator
+- [hyperfine](https://github.com/sharkdp/hyperfine): Command-line benchmarking tool
+- [jj](https://github.com/jj-vcs/jj): Git-compatible distributed version control system
+- [jless](https://jless.io/): Command-line pager for JSON data
+- [jnv](https://github.com/ynqa/jnv): Interactive JSON filter using jq
+- [jq](https://jqlang.github.io/jq/): Lightweight and flexible command-line JSON processor
+- [just](https://github.com/casey/just): Handy way to save and run project-specific commands
+- [lazygit](https://github.com/jesseduffield/lazygit/): Simple terminal UI for git commands
+- [lsd](https://github.com/lsd-rs/lsd): Clone of ls with colorful output, file type icons, and more
+- [lua](https://www.lua.org/): Powerful, lightweight programming language
+- [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli): CLI for Node.js style checker and lint tool for Markdown files
+- [neovim](https://neovim.io/): Ambitious Vim-fork focused on extensibility and agility
+- [ripgrep](https://github.com/BurntSushi/ripgrep): Search tool like grep and The Silver Searcher
+- [t-rec](https://github.com/sassman/t-rec-rs): Blazingly fast terminal recorder that generates animated gif images for the web
+- [taplo](https://taplo.tamasfe.dev): TOML toolkit written in Rust
+- [tldr](https://tldr.sh/): Simplified and community-driven man pages
+- [tokei](https://github.com/XAMPPRocky/tokei): Program that allows you to count code, quickly
+- [uv](https://docs.astral.sh/uv/): Extremely fast Python package installer and resolver, written in Rust
+- [xdg-ninja](https://github.com/b3nj5m1n/xdg-ninja): Check your $HOME for unwanted files and directories
+- [yazi](https://github.com/sxyazi/yazi): Blazing fast terminal file manager written in Rust, based on async I/O
+- [zoxide](https://github.com/ajeetdsouza/zoxide): Shell extension to navigate your filesystem faster
