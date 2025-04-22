@@ -8,4 +8,5 @@ notes/
 .DS_Store
 debug/
 custom/
-assets/
+.workspaces/
+_kep/
