@@ -16,3 +16,4 @@ abbr -a -- gm 'go mod tidy'
 abbr -a -- fzfp "fzf --preview 'bat --color=always {}' --preview-window '~3'"
 abbr -a -- jl 'jj log'
 abbr -a -- jjbsr 'jj b s -r \'@-\''
+abbr -a -- jjgpm 'jj git push main'
