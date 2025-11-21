@@ -1,8 +1,0 @@
-{{ if eq .chezmoi.os "linux" -}}
-{{ if or (eq .chezmoi.osRelease.id "debian") (eq .chezmoi.osRelease.id "ubuntu") -}}
-#!/bin/bash
-
-apt update
-apt install -y {{ range .packages.debian.apt }} {{ . | quote }} {{ end }}
-{{ end -}}
-{{ end -}}
