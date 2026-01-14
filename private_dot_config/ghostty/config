@@ -17,22 +17,25 @@
 #font-family = Input Mono Compressed
 #font-family = Menlo
 #font-family = Lilex
+#font-family = Fira Code
+#font-family = Atkinson Hyperlegible Mono
 #font-family = Rec Mono Duotone
-font-family = Monaspace Krypton Var
-#font-family = M PLUS Code Latin
+#font-family = Monaspace Neon
+font-family = Monaspace Argon
+##font-family = M PLUS Code Latin
 #font-style  = Medium
 #font-family = Iosevka Term
 #font-family = Lilex
-font-size = 20
-font-feature = ss04
+font-size = 18
+#font-feature = ss04
 
 # Save, then refresh config with a keybind
 # Mine is the default: `keybind = super+shift+comma=reload_config`
 
 #> Theme
-theme = tokyonight_night
+theme = Catppuccin Mocha
 #background = #111119
-background = #11121c
+#background = #11121c
 palette = 0=#112616
 # Overrides from AlienBlood
 cursor-color = #73fa91
@@ -43,6 +46,7 @@ selection-foreground = #73fa91
 minimum-contrast = 1
 selection-invert-fg-bg = false
 adjust-cursor-thickness = 4
+split-divider-color = #1ACECE
 
 #> System
 command = /opt/homebrew/bin/fish
@@ -150,7 +154,7 @@ keybind = super+ctrl+right=resize_split:right,10
 
 
 #>Pretty fluff settings
-bold-is-bright = false
+bold-is-bright = true
 window-decoration = true
 window-save-state = always
 macos-window-shadow = false

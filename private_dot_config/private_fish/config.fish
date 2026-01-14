@@ -7,7 +7,8 @@ type -q pnpm; and set -x PNPM_HOME "$HOME/.local/share/pnpm"; and fish_add_path 
 set -x BUN_INSTALL "$HOME/.bun"
 fish_add_path "$BUN_INSTALL/bin"
 
-test -e "$HOME/.cargo/env.fish"; and source "$HOME/.cargo/env.fish"
+set -x CARGO_HOME "$HOME/.local/cargo"
+test -e "$CARGO_HOME/env.fish"; and source "$HOME/.local/cargo/env.fish"
 
 set --export ZVM_INSTALL "$HOME/.zvm/self"
 fish_add_path "$HOME/.zvm/bin"
@@ -41,4 +42,4 @@ if status is-interactive
     end
 end
 
-fish_add_path $HOME/.cache/lm-studio/bin
+bind ctrl-space accept-autosuggestion
