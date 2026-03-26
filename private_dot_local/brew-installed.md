@@ -1,5 +1,3 @@
-<!-- brew info --json --installed | jq '.[] | "- [\(.full_name)](\(.homepage)): \(.desc)"' -cr > ~/.local/brew-installed.md -->
-
 - [age](https://github.com/FiloSottile/age): Simple, modern, secure file encryption
 - [angle-grinder](https://github.com/rcoh/angle-grinder): Slice and dice log files on the command-line
 - [aom](https://aomedia.googlesource.com/aom): Codec library for encoding and decoding AV1 video streams
@@ -72,7 +70,7 @@
 - [gh](https://cli.github.com/): GitHub command-line tool
 - [ghostscript](https://www.ghostscript.com/): Interpreter for PostScript and PDF
 - [ghq](https://github.com/x-motemen/ghq): Remote repository management made easy
-- [simonwhitaker/tap/gibo](https://github.com/simonwhitaker/gibo):
+- [simonwhitaker/tap/gibo](https://github.com/simonwhitaker/gibo): 
 - [giflib](https://giflib.sourceforge.net/): Library and utilities for processing GIFs
 - [git](https://git-scm.com): Distributed revision control system
 - [git-delta](https://github.com/dandavison/delta): Syntax-highlighting pager for git and diff output
@@ -86,9 +84,11 @@
 - [glow](https://github.com/charmbracelet/glow): Render markdown on the CLI
 - [gmp](https://gmplib.org/): GNU multiple precision arithmetic library
 - [gnu-sed](https://www.gnu.org/software/sed/): GNU implementation of the famous stream editor
+- [gnupg](https://gnupg.org/): GNU Pretty Good Privacy (PGP) package
 - [gnutls](https://gnutls.org/): GNU Transport Layer Security (TLS) Library
 - [go](https://go.dev/): Open source programming language to build simple/reliable/efficient software
 - [go-task/tap/go-task](https://taskfile.dev): Task runner / simpler Make alternative written in Go
+- [gpgme](https://www.gnupg.org/related_software/gpgme/): Library access to GnuPG
 - [graphite2](https://graphite.sil.org/): Smart font renderer for non-Roman scripts
 - [graphviz](https://graphviz.org/): Graph visualization software from AT&T and Bell Labs
 - [graphviz2drawio](https://github.com/hbmartin/graphviz2drawio/): Convert graphviz (dot) files into draw.io / lucid (mxGraph) format
@@ -116,23 +116,29 @@
 - [jpeg-turbo](https://www.libjpeg-turbo.org/): JPEG image codec that aids compression and decompression
 - [jpeg-xl](https://jpeg.org/jpegxl/index.html): New file format for still image compression
 - [jq](https://jqlang.github.io/jq/): Lightweight and flexible command-line JSON processor
+- [json-c](https://github.com/json-c/json-c/wiki): JSON parser for C
 - [just](https://github.com/casey/just): Handy way to save and run project-specific commands
 - [mike-engel/jwt-cli/jwt-cli](https://github.com/mike-engel/jwt-cli): Super fast CLI tool to decode and encode JWTs built in Rust
+- [krb5](https://web.mit.edu/kerberos/): Network authentication protocol
 - [lame](https://lame.sourceforge.io/): High quality MPEG Audio Layer III (MP3) encoder
 - [lazygit](https://github.com/jesseduffield/lazygit/): Simple terminal UI for git commands
 - [leptonica](http://www.leptonica.org/): Image processing and image analysis library
 - [libarchive](https://www.libarchive.org): Multi-format archive and compression library
 - [libass](https://github.com/libass/libass): Subtitle renderer for the ASS/SSA subtitle format
+- [libassuan](https://www.gnupg.org/related_software/libassuan/): Assuan IPC Library
 - [libavif](https://github.com/AOMediaCodec/libavif): Library for encoding and decoding .avif files
 - [libb2](https://blake2.net/): Secure hashing function
 - [libbluray](https://www.videolan.org/developers/libbluray.html): Blu-Ray disc playback library for media players like VLC
 - [libde265](https://github.com/strukturag/libde265): Open h.265 video codec implementation
 - [libdeflate](https://github.com/ebiggers/libdeflate): Heavily optimized DEFLATE/zlib/gzip compression and decompression
 - [libevent](https://libevent.org/): Asynchronous event library
+- [libgcrypt](https://gnupg.org/related_software/libgcrypt/): Cryptographic library based on the code from GnuPG
 - [libgit2](https://libgit2.github.com/): C library of Git core methods that is re-entrant and linkable
+- [libgpg-error](https://www.gnupg.org/related_software/libgpg-error/): Common error values for all GnuPG components
 - [libheif](https://www.libde265.org/): ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 - [libidn](https://www.gnu.org/software/libidn/): International domain name library
 - [libidn2](https://www.gnu.org/software/libidn/#libidn2): International domain name library (IDNA2008, Punycode and TR46)
+- [libksba](https://www.gnupg.org/related_software/libksba/): X.509 and CMS library
 - [liblinear](https://www.csie.ntu.edu.tw/~cjlin/liblinear/): Library for large linear classification
 - [liblqr](https://liblqr.wikidot.com/): C/C++ seam carving library
 - [libmicrohttpd](https://www.gnu.org/software/libmicrohttpd/): Light HTTP/1.1 server library
@@ -155,12 +161,13 @@
 - [libtool](https://www.gnu.org/software/libtool/): Generic library support script
 - [libunibreak](https://github.com/adah1972/libunibreak): Implementation of the Unicode line- and word-breaking algorithms
 - [libunistring](https://www.gnu.org/software/libunistring/): C string library for manipulating Unicode strings
+- [libusb](https://libusb.info/): Library for USB device access
 - [libuv](https://libuv.org): Multi-platform support library with a focus on asynchronous I/O
 - [libvidstab](http://public.hronopik.de/vid.stab/): Transcode video stabilization plugin
 - [libvmaf](https://github.com/Netflix/vmaf): Perceptual video quality assessment based on multi-method fusion
 - [libvorbis](https://xiph.org/vorbis/): Vorbis general audio compression codec
 - [libvpx](https://www.webmproject.org/code/): VP8/VP9 video codec
-- [libvterm](https://www.leonerd.org.uk/code/libvterm/): C99 library which implements a VT220 or xterm terminal emulator
+- [libwebsockets](https://github.com/warmcat/libwebsockets): C websockets server library
 - [libx11](https://www.x.org/): X.Org: Core X11 protocol client library
 - [libxau](https://www.x.org/): X.Org: A Sample Authorization Protocol for X
 - [libxcb](https://www.x.org/): X.Org: Interface to the X Window System protocol
@@ -189,7 +196,6 @@
 - [mpfr](https://www.mpfr.org/): C library for multiple-precision floating-point computations
 - [mpg123](https://www.mpg123.de/): MP3 player for Linux and UNIX
 - [mr](https://myrepos.branchable.com/): Multiple Repository management tool
-- [msgpack](https://msgpack.org/): Library for a binary-based efficient data interchange format
 - [nasm](https://www.nasm.us/): Netwide Assembler (NASM) is an 80x86 assembler
 - [navi](https://github.com/denisidoro/navi): Interactive cheatsheet tool for the command-line
 - [xwmx/taps/nb](https://github.com/xwmx/nb): null
@@ -204,6 +210,7 @@
 - [nmap](https://nmap.org/): Port scanning utility for large networks
 - [node](https://nodejs.org/): Platform built on V8 to build network applications
 - [node@20](https://nodejs.org/): Platform built on V8 to build network applications
+- [npth](https://gnupg.org/): New GNU portable threads library
 - [numpy](https://www.numpy.org/): Package for scientific computing with Python
 - [nushell](https://www.nushell.sh): Modern shell for the GitHub era
 - [oniguruma](https://github.com/kkos/oniguruma/): Regular expressions library
@@ -221,10 +228,11 @@
 - [par](http://www.nicemice.net/par/): Paragraph reflow for email
 - [pastel](https://github.com/sharkdp/pastel): Command-line tool to generate, analyze, convert and manipulate colors
 - [pcre2](https://www.pcre.org/): Perl compatible regular expressions library with a new API
+- [pinentry](https://www.gnupg.org/related_software/pinentry/): Passphrase entry dialog utilizing the Assuan protocol
 - [pixman](https://cairographics.org/): Low-level library for pixel manipulation
 - [pkgconf](https://github.com/pkgconf/pkgconf): Package compiler and linker metadata toolkit
 - [pnpm](https://pnpm.io/): Fast, disk space efficient package manager
-- [podman](https://podman.io/): Tool for managing OCI containers and pods
+- [postgresql@14](https://www.postgresql.org/): Object-relational database system
 - [procs](https://github.com/dalance/procs): Modern replacement for ps written in Rust
 - [pycparser](https://github.com/eliben/pycparser): C parser in Python
 - [pygments](https://pygments.org/): Generic syntax highlighter
@@ -241,8 +249,10 @@
 - [rtmpdump](https://rtmpdump.mplayerhq.hu/): Tool for downloading RTMP streaming media
 - [rubberband](https://breakfastquay.com/rubberband/): Audio time stretcher tool and library
 - [sass/sass/sass](https://sass-lang.com): Stylesheet Preprocessor
+- [sccache](https://github.com/mozilla/sccache): Used as a compiler wrapper and avoids compilation when possible
 - [screenresolution](https://github.com/jhford/screenresolution): Get, set, and list display resolution
 - [sdl2](https://www.libsdl.org/): Low-level access to audio, keyboard, mouse, joystick, and graphics
+- [sevenzip](https://7-zip.org): 7-Zip is a file archiver with a high compression ratio
 - [shared-mime-info](https://wiki.freedesktop.org/www/Software/shared-mime-info): Database of common MIME types
 - [sherlock](https://sherlockproject.xyz/): Hunt down social media accounts by username
 - [charmbracelet/tap/skate](https://charm.sh/): A personal key value store 🛼
@@ -263,14 +273,17 @@
 - [tokei](https://github.com/XAMPPRocky/tokei): Program that allows you to count code, quickly
 - [tracy](https://github.com/wolfpld/tracy): Real-time, nanosecond resolution frame profiler
 - [tree-sitter](https://tree-sitter.github.io/): Parser generator tool and incremental parsing library
+- [ttyd](https://tsl0922.github.io/ttyd/): Command-line tool for sharing terminal over the web
 - [unbound](https://www.unbound.net): Validating, recursive, caching DNS resolver
 - [unibilium](https://github.com/neovim/unibilium): Very basic terminfo library
 - [unixodbc](https://www.unixodbc.org/): ODBC 3 connectivity for UNIX
 - [utf8proc](https://juliastrings.github.io/utf8proc/): Clean C library for processing UTF-8 Unicode data
 - [uv](https://docs.astral.sh/uv/): Extremely fast Python package installer and resolver, written in Rust
+- [vhs](https://github.com/charmbracelet/vhs): Your CLI home video recorder
 - [w3m](https://w3m.sourceforge.net/): Pager/text based browser
 - [webp](https://developers.google.com/speed/webp/): Image format providing lossless and lossy compression for web images
 - [wget](https://www.gnu.org/software/wget/): Internet file retriever
+- [wgo](https://github.com/bokwoon95/wgo): Watch arbitrary files and respond with arbitrary commands
 - [ikebastuz/wiper/wiper](https://github.com/ikebastuz/wiper): Cross-platform space inspector
 - [wxwidgets](https://www.wxwidgets.org): Cross-platform C++ GUI toolkit
 - [x264](https://www.videolan.org/developers/x264.html): H.264/AVC encoder

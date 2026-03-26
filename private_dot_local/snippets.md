@@ -10,3 +10,4 @@ end > brightnesses.txt
 ```bash
 brew info --json --installed | jq '.[] | "- [\(.full_name)](\(.homepage)): \(.desc)"' -cr > ~/.local/brew-installed.md
 ```
+networksetup -setwebproxystate "Wi-Fi" on && networksetup -setsecurewebproxystate "Wi-Fi" on

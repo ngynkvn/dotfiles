@@ -52,7 +52,7 @@ $(git diff HEAD -- $ignored | /bin/cat)
         set_color 5261a9
         llama-cli \
             --no-display-prompt \
-            --no-warmup --simple-io \
+            --simple-io \
             -m $MODEL_PATH \
             -f $promptfile \
             -fa -n $NTOKENS -c $CTXSIZE \

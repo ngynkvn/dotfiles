@@ -1,5 +1,5 @@
 tmp/
-*.tmp.*
+*.tmp*
 journal/
 .vscode
 .aider*
@@ -10,3 +10,16 @@ debug/
 custom/
 .workspaces/
 _kep/
+CLAUDE.md
+.claude/
+.workspace/
+profile.json.gz
+compile_commands.json
+debug.log
+.idea/
+.sg/
+sgconfig.yml
+NOTES.md
+PLAN.md
+AGENTS
+AGENTS.md
